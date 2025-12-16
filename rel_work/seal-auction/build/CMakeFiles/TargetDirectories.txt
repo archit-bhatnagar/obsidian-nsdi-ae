@@ -1,0 +1,3 @@
+/home/architb/seal-auction/build/CMakeFiles/auction_benchmark.dir
+/home/architb/seal-auction/build/CMakeFiles/edit_cache.dir
+/home/architb/seal-auction/build/CMakeFiles/rebuild_cache.dir

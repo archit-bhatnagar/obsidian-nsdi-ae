@@ -1,0 +1,2 @@
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/home/architb/heavyhitters/target/release/build/typenum-2a7776c0fc19704c/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=/home/architb/heavyhitters/target/release/build/typenum-2a7776c0fc19704c/out/op.rs

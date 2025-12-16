@@ -1,0 +1,1 @@
+{"rustc":12047664292709028906,"features":"[]","target":6423864331174066244,"profile":1680656715729475402,"path":1302180374061146726,"deps":[],"local":[{"CheckDepInfo":{"dep_info":"release/.fingerprint/proc-macro-hack-e6516ace3a5806f0/dep-lib-proc-macro-hack"}}],"rustflags":["-C","target-cpu=native"],"metadata":10438225366633365275,"config":2202906307356721367,"compile_kind":0}

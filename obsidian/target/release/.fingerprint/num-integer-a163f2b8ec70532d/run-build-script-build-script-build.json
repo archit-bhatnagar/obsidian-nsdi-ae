@@ -1,0 +1,1 @@
+{"rustc":13226066032359371072,"features":"","declared_features":"","target":0,"profile":0,"path":0,"deps":[[12250805917633933989,"build_script_build",false,7084343127256439637]],"local":[{"RerunIfChanged":{"output":"release/build/num-integer-a163f2b8ec70532d/output","paths":["build.rs"]}}],"rustflags":["-C","target-cpu=native"],"config":0,"compile_kind":0}

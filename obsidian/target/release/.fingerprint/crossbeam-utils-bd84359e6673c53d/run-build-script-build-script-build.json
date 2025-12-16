@@ -1,0 +1,1 @@
+{"rustc":13226066032359371072,"features":"","declared_features":"","target":0,"profile":0,"path":0,"deps":[[4429950083264672527,"build_script_build",false,18366554113304616875]],"local":[{"RerunIfChanged":{"output":"release/build/crossbeam-utils-bd84359e6673c53d/output","paths":["no_atomic.rs"]}}],"rustflags":[],"config":0,"compile_kind":0}

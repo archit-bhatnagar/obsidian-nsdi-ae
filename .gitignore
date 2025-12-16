@@ -1,0 +1,12 @@
+# Ignore third-party frameworks and dependencies
+rel_work/zkp_framework/
+rel_work/addax/
+
+# Ignore MP-SPDZ installation (evaluators should install it themselves)
+rel_work/mp-spdz-0.3.9/
+
+# Rust debug build artifacts (large binaries that exceed GitHub's 100MB limit)
+# Keep release builds for artifact evaluation
+obsidian/target/debug/
+obsidian/target/.rustc_info.json
+obsidian/target/CACHEDIR.TAG
