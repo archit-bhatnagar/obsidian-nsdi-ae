@@ -299,8 +299,22 @@ fn mal_preprocess_check(
 }
 
 fn main() {
-    let num_clients = 800;
-    let domain_size = 1024;
+    // Parse command-line arguments
+    let args: Vec<String> = std::env::args().collect();
+    
+    let num_clients = if args.len() > 1 {
+        args[1].parse().unwrap_or(800)
+    } else {
+        800
+    };
+    
+    let domain_size = if args.len() > 2 {
+        args[2].parse().unwrap_or(1024)
+    } else {
+        1024
+    };
+    
+    println!("Configuration: {} bidders, domain size {}", num_clients, domain_size);
 
     // Initialize communication tracking
     let mut comm_stats = CommunicationStats::default();

@@ -61,13 +61,26 @@ fn eval_all(key: &SketchDPFKey<FE, FE>, domain_size: usize) -> Vec<FE> {
 
 fn main() {
     println!("Party 0 (Server) starting...");
-    let num_clients = 100;
-    let domain_size = 100;
+    
+    // Parse command-line arguments
+    let args: Vec<String> = std::env::args().collect();
+    let num_clients = if args.len() > 1 {
+        args[1].parse().unwrap_or(100)
+    } else {
+        100
+    };
+    let domain_size = if args.len() > 2 {
+        args[2].parse().unwrap_or(1024)
+    } else {
+        1024
+    };
+    
+    println!("Configuration: {} clients, domain size {}", num_clients, domain_size);
 
-    let listener = TcpListener::bind("127.0.0.1:8888").expect("Failed to bind to address");
-    println!("Listening on port 8888");
+    let listener = TcpListener::bind("127.0.0.1:8889").expect("Failed to bind to address");
+    // println!("Listening on port 8888");
     let (stream, _) = listener.accept().expect("Failed to accept connection");
-    println!("Party 1 connected");
+    // println!("Party 1 connected");
 
     stream.set_nodelay(true);
 
@@ -133,8 +146,12 @@ fn main() {
     let mut round6_compute_time = Duration::new(0, 0);
     let mut round6_comm_time = Duration::new(0, 0);
     let mut mac_verification_time = Duration::new(0, 0);
+    
+    // Communication tracking
+    let mut preprocessing_comm_size = 0usize;
+    let mut online_comm_size = 0usize;
 
-    println!("Starting preprocessing...");
+    // println!("Starting preprocessing...");
     let preprocess_start = Instant::now();
     let alpha_val = FE::random();
     
@@ -198,7 +215,7 @@ fn main() {
     preprocessing_time = preprocess_start.elapsed();
 
     // OPTIMIZED: Bulk serialization for preprocessing
-    println!("Serializing preprocessing data with bulk optimization...");
+    // println!("Serializing preprocessing data with bulk optimization...");
     let serialize_start = Instant::now();
     let preprocessing_msg = Message::PreprocessingData {
         alpha_share: fe_to_bytes(&alpha_val_1),
@@ -215,7 +232,10 @@ fn main() {
         alpha_r3_share: fe_to_bytes(&alpha_r3_1),
         x_values: x_val.clone(),
     };
-    println!("Preprocessing serialization took: {:?}", serialize_start.elapsed());
+    let preprocessing_send_size = bincode::serialize(&preprocessing_msg).unwrap().len();
+    preprocessing_comm_size += preprocessing_send_size;
+    // println!("Preprocessing serialization took: {:?}", serialize_start.elapsed());
+    // println!("📤 Preprocessing SEND: {} bytes", preprocessing_send_size);
 
     send_tx.send(SendCommand::Send(preprocessing_msg)).unwrap();
     receive_tx.send(ReceiveCommand::Receive).unwrap();
@@ -283,19 +303,16 @@ fn main() {
     let (all_client_s0, all_client_m0) = client_processing_handle.join().unwrap();
     client_processing_time = client_processing_start.elapsed();
 
-    // Add this near the top with other variables
-    let mut online_comm_size = 0usize;
-
     let online_start = Instant::now();
     let mut all_opened_values = Vec::new();
     let mut all_mac_shares_0 = Vec::new();
 
     // ROUND 1 - OPTIMIZED
-    println!("Round 1: Opening x2 values");
+    // println!("Round 1: Opening x2 values");
     let round1_compute_start = Instant::now();
     
-    let mut now = Local::now();
-    println!("r1 compute start: {}", now.format("%Y-%m-%d %H:%M:%S%.6f"));
+    // let mut now = Local::now();
+    // println!("r1 compute start: {}", now.format("%Y-%m-%d %H:%M:%S%.6f"));
     let x2_computation_handle = thread::spawn(move || {
         let mut x2_shares_0 = Vec::with_capacity(domain_size);
         for idx in 0..domain_size {
@@ -307,8 +324,8 @@ fn main() {
 
     let x2_shares_0 = x2_computation_handle.join().unwrap();
     round1_compute_time = round1_compute_start.elapsed();
-    now = Local::now();
-    println!("r1 compute end: {}", now.format("%Y-%m-%d %H:%M:%S%.6f"));
+    // now = Local::now();
+    // println!("r1 compute end: {}", now.format("%Y-%m-%d %H:%M:%S%.6f"));
     // println!("🟦 PARTY0: Computed x2_shares_0[0] = {}", x2_shares_0[0].value());
 
     let round1_comm_start = Instant::now();
@@ -319,7 +336,7 @@ fn main() {
     };
     let round1_send_size = bincode::serialize(&round1_msg).unwrap().len();
     online_comm_size += round1_send_size;
-    println!("📤 Round 1 SEND: {} bytes", round1_send_size);
+    // println!("📤 Round 1 SEND: {} bytes", round1_send_size);
     // TEST CORRECTNESS
     // let x2_bulk_bytes = bulk_fe_to_bytes(&x2_shares_0);
     // println!("🟦 PARTY0: Serialized {} FEs into {} bytes", x2_shares_0.len(), x2_bulk_bytes.len());
@@ -331,12 +348,12 @@ fn main() {
     // println!("Round 1 serialization took: {:?}", serialize_start.elapsed());
     
     send_tx.send(SendCommand::Send(round1_msg)).unwrap();
-    now = Local::now();
-    println!("r1 send 1: {}", now.format("%Y-%m-%d %H:%M:%S%.6f"));
+    // now = Local::now();
+    // println!("r1 send 1: {}", now.format("%Y-%m-%d %H:%M:%S%.6f"));
     
     receive_tx.send(ReceiveCommand::Receive).unwrap();
-    now = Local::now();
-    println!("r1 send 2: {}", now.format("%Y-%m-%d %H:%M:%S%.6f"));
+    // now = Local::now();
+    // println!("r1 send 2: {}", now.format("%Y-%m-%d %H:%M:%S%.6f"));
 
     
     round1_comm_time = round1_comm_start.elapsed();
@@ -351,10 +368,10 @@ fn main() {
     // OPTIMIZED: Bulk deserialization for Round 1
     let deserialize_start = Instant::now();
     let x2_shares_1 = bulk_bytes_to_fe(&x2_shares_1_bulk);  // OPTIMIZED
-    println!("Round 1 deserialization took: {:?}", deserialize_start.elapsed());
+    // println!("Round 1 deserialization took: {:?}", deserialize_start.elapsed());
     
-    now = Local::now();
-    println!("r1 recv: {}", now.format("%Y-%m-%d %H:%M:%S%.6f"));
+    // now = Local::now();
+        // println!("r1 recv: {}", now.format("%Y-%m-%d %H:%M:%S%.6f"));
 
     let col_values_clone = (col_sum_values1_0.clone(), col_sum_values2_0.clone());
     let alpha_r2_0_clone = alpha_r2_0.clone();
@@ -386,7 +403,7 @@ fn main() {
             let domain_i = updated_domain as i128;
             let x2_val = ((signed % domain_i + domain_i) % domain_i) as u64;
 
-            println!(" The x2_val at {} is {:?}", idx, x2_val);
+            // println!(" The x2_val at {} is {:?}", idx, x2_val);
             let mut col_sum_shifted_val_1_0 = vec![FE::zero(); updated_domain];
             let mut col_sum_shifted_val_2_0 = vec![FE::zero(); updated_domain];
             
@@ -415,7 +432,7 @@ fn main() {
     let tie_values2_0_clone = tie_values2_0.clone();
     
     while current_threshold > 0 && !second_highest_found {
-        println!("Checking for threshold: {} bidders", current_threshold);
+        // println!("Checking for threshold: {} bidders", current_threshold);
         
         // ROUND 2
         let round2_compute_start = Instant::now();
@@ -437,7 +454,7 @@ fn main() {
         };
         let round2_send_size = bincode::serialize(&round2_msg).unwrap().len();
         online_comm_size += round2_send_size;
-        println!("📤 Round 2 SEND: {} bytes", round2_send_size);
+        // println!("📤 Round 2 SEND: {} bytes", round2_send_size);
         
         send_tx.send(SendCommand::Send(round2_msg)).unwrap();
         receive_tx.send(ReceiveCommand::Receive).unwrap();
@@ -494,7 +511,7 @@ fn main() {
 
         let round4_send_size = bincode::serialize(&round4_msg).unwrap().len();
         online_comm_size += round4_send_size;
-        println!("📤 Round 4 SEND: {} bytes", round4_send_size);
+        // println!("📤 Round 4 SEND: {} bytes", round4_send_size);
         
         send_tx.send(SendCommand::Send(round4_msg)).unwrap();
         receive_tx.send(ReceiveCommand::Receive).unwrap();
@@ -569,7 +586,7 @@ fn main() {
             // OPTIMIZED: Bulk deserialization for Round 5
             let deserialize_start = Instant::now();
             let col_ge_threshold_shares_1 = bulk_bytes_to_fe(&col_ge_threshold_shares_1_bulk); // OPTIMIZED
-            println!("Round 5 deserialization took: {:?}", deserialize_start.elapsed());
+            // println!("Round 5 deserialization took: {:?}", deserialize_start.elapsed());
 
             for idx in 0..domain_size {
                 let col_ge_threshold = col_ge_threshold_shares_0[idx].clone() + col_ge_threshold_shares_1[idx].clone();
@@ -616,8 +633,8 @@ fn main() {
         
             let round6_send_size = bincode::serialize(&round6_msg).unwrap().len();
             online_comm_size += round6_send_size;
-            println!("📤 Round 6 SEND: {} bytes", round6_send_size);
-            println!("Round 6 serialization took: {:?}", serialize_start.elapsed());
+            // println!("📤 Round 6 SEND: {} bytes", round6_send_size);
+            // println!("Round 6 serialization took: {:?}", serialize_start.elapsed());
             
             send_tx.send(SendCommand::Send(round6_msg)).unwrap();
             receive_tx.send(ReceiveCommand::Receive).unwrap();
@@ -632,7 +649,7 @@ fn main() {
             // OPTIMIZED: Bulk deserialization for Round 6
             let deserialize_start = Instant::now();
             let temp_sum_shares_1 = bulk_bytes_to_fe(&temp_sum_shares_1_bulk); // OPTIMIZED
-            println!("Round 6 deserialization took: {:?}", deserialize_start.elapsed());
+            // println!("Round 6 deserialization took: {:?}", deserialize_start.elapsed());
 
             let mut highest_bidder = 0;
             for bidder in 0..num_clients {
@@ -658,8 +675,8 @@ fn main() {
 
             let mac_send_size = bincode::serialize(&final_msg).unwrap().len();
             online_comm_size += mac_send_size;
-            println!("📤 MAC Verification SEND: {} bytes", mac_send_size);
-            println!("MAC verification serialization took: {:?}", serialize_start.elapsed());
+            // println!("📤 MAC Verification SEND: {} bytes", mac_send_size);
+            // println!("MAC verification serialization took: {:?}", serialize_start.elapsed());
 
             send_tx.send(SendCommand::Send(final_msg)).unwrap();
             receive_tx.send(ReceiveCommand::Receive).unwrap();
@@ -674,7 +691,7 @@ fn main() {
             // OPTIMIZED: Bulk deserialization for MAC verification
             let deserialize_start = Instant::now();
             let mac_shares_1_vec: Vec<Vec<u8>> = mac_shares_1_bulk.chunks_exact(8).map(|chunk| chunk.to_vec()).collect(); // OPTIMIZED
-            println!("MAC verification deserialization took: {:?}", deserialize_start.elapsed());
+            // println!("MAC verification deserialization took: {:?}", deserialize_start.elapsed());
 
             let opened_values_for_verification = all_opened_values.clone();
             let mac_shares_0_for_verification = all_mac_shares_0.clone();
@@ -768,4 +785,10 @@ fn main() {
          online_comm_size as f64 / 1024.0,
          online_comm_size as f64 / (1024.0 * 1024.0));
     
+    // Parseable summary for scripts
+    println!("\n=== BENCHMARK SUMMARY ===");
+    println!("PREPROCESS_TIME_MS: {:.3}", preprocessing_time.as_secs_f64() * 1000.0);
+    println!("ONLINE_TIME_MS: {:.3}", online_time.as_secs_f64() * 1000.0);
+    println!("PREPROCESS_COMM_BYTES: {}", preprocessing_comm_size);
+    println!("ONLINE_COMM_BYTES: {}", online_comm_size);
 }

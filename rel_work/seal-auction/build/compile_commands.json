@@ -1,8 +1,7 @@
 [
 {
-  "directory": "/home/architb/seal-auction/build",
-  "command": "/usr/bin/c++  -isystem /home/architb/vcpkg/installed/x64-linux/include/SEAL-4.1 -isystem /home/architb/vcpkg/installed/x64-linux/include -std=gnu++17 -o CMakeFiles/auction_benchmark.dir/auction_benchmark.cpp.o -c /home/architb/seal-auction/auction_benchmark.cpp",
-  "file": "/home/architb/seal-auction/auction_benchmark.cpp",
-  "output": "CMakeFiles/auction_benchmark.dir/auction_benchmark.cpp.o"
+  "directory": "/home/architb/obsidian-nsdi/rel_work/seal-auction/build",
+  "command": "/usr/bin/c++  -isystem /home/architb/vcpkg/installed/x64-linux/include/SEAL-4.1 -isystem /home/architb/vcpkg/installed/x64-linux/include -std=gnu++17 -o CMakeFiles/auction_benchmark.dir/auction_benchmark.cpp.o -c /home/architb/obsidian-nsdi/rel_work/seal-auction/auction_benchmark.cpp",
+  "file": "/home/architb/obsidian-nsdi/rel_work/seal-auction/auction_benchmark.cpp"
 }
 ]

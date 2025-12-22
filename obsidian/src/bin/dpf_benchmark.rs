@@ -6,6 +6,80 @@ use rand::Rng;
 use counttree::prg::FromRng;
 use rayon::prelude::*;
 
+// Communication size tracking structure (copied from dpf_run_comm.rs)
+#[derive(Debug, Default)]
+struct CommunicationStats {
+    preprocessing_size: usize,
+    mal_preprocess_checks: usize,
+    round1_x2_opening: usize,
+    round1_x2_macs: usize,
+    round2_r3_opening: usize,
+    round2_r3_macs: usize,
+    round3_tie_opening: usize,
+    round3_tie_macs: usize,
+    round4_second_opening: usize,
+    round4_second_macs: usize,
+    round5_winner_opening: usize,
+    round5_winner_macs: usize,
+    alpha_opening: usize,
+    total_size: usize,
+    message_count: usize,
+}
+
+impl CommunicationStats {
+    fn add_message(&mut self, phase: &str, size: usize) {
+        match phase {
+            "preprocessing" => self.preprocessing_size += size,
+            "mal_preprocess" => self.mal_preprocess_checks += size,
+            "round1_x2_opening" => self.round1_x2_opening += size,
+            "round1_x2_macs" => self.round1_x2_macs += size,
+            "round2_r3_opening" => self.round2_r3_opening += size,
+            "round2_r3_macs" => self.round2_r3_macs += size,
+            "round3_tie_opening" => self.round3_tie_opening += size,
+            "round3_tie_macs" => self.round3_tie_macs += size,
+            "round4_second_opening" => self.round4_second_opening += size,
+            "round4_second_macs" => self.round4_second_macs += size,
+            "round5_winner_opening" => self.round5_winner_opening += size,
+            "round5_winner_macs" => self.round5_winner_macs += size,
+            "alpha_opening" => self.alpha_opening += size,
+            _ => {}
+        }
+        self.total_size += size;
+        self.message_count += 1;
+    }
+    
+    fn get_preprocessing_total(&self) -> usize {
+        self.preprocessing_size + self.mal_preprocess_checks
+    }
+    
+    fn get_online_total(&self) -> usize {
+        self.total_size - self.get_preprocessing_total()
+    }
+}
+
+// Helper functions (copied from dpf_run_comm.rs)
+fn fe_vector_size(vec: &[FE]) -> usize {
+    vec.len() * 8 // Each FE is 8 bytes (u64)
+}
+
+fn fe_size(_fe: &FE) -> usize {
+    8 // Each FE is 8 bytes (u64)
+}
+
+fn share_size<T>(_share: &T) -> usize {
+    8 // One share, 8 bytes
+}
+
+fn fss_key_size(key: &SketchDPFKey<FE, FE>) -> usize {
+    match bincode::serialize(key) {
+        Ok(serialized) => serialized.len(),
+        Err(_) => {
+            let estimated_levels = 10; // log2(1024) for your domain
+            estimated_levels * (2 * 8 + 1) // 2 FE elements + 1 byte for bits
+        }
+    }
+}
+
 // Add these helper functions at the top of your file
 fn unzip4<A, B, C, D>(iter: impl Iterator<Item = (A, B, C, D)>) -> (Vec<A>, Vec<B>, Vec<C>, Vec<D>) {
     let mut a_vec = Vec::new();
@@ -103,10 +177,11 @@ fn mal_preprocess_check(
     values1_0: &[FE], values1_1: &[FE],
     values2_0: &[FE], values2_1: &[FE],
     domain_size: usize,
-    r: &FE,
-    alpha_val: &FE,
+    _r: &FE,
+    _alpha_val: &FE,
     r0: &FE, r1: &FE,
-    alpha_val_0: &FE, alpha_val_1: &FE) {
+    alpha_val_0: &FE, alpha_val_1: &FE,
+    comm_stats: &mut CommunicationStats) {
     
     let mut rng1 = rand::thread_rng();
     let mut rng2 = rand::thread_rng();
@@ -151,21 +226,74 @@ fn mal_preprocess_check(
     let final_res = sum_z1z2_z3 + sum_z4_r;
     // println!("MAC check result: {:?}", final_res.value());
     
+    // COMMUNICATION: Random challenge vectors a1, a2 (sent by one party)
+    let mut mal_check_size = 0;
+    
+    // COMMUNICATION: Shares of z values (one share from each party)
+    mal_check_size += share_size(&z_star_0); // z_star share
+
+    // COMMUNICATION: Multiplication check shares (beaver triples)
+    mal_check_size += fe_size(&comb_e);     // opened e value
+    mal_check_size += fe_size(&comb_f);     // opened f value
+    
+    mal_check_size += share_size(&result0);
+    mal_check_size += share_size(&final_res);
+    
     let alpha_val_recon = alpha_val_0.clone() + alpha_val_1.clone();
-    let mac_check = alpha_val_recon * z1 - z_star;
-    // println!("MAC check: {:?}", mac_check.value());
+    let _mac_check = alpha_val_recon * z1 - z_star;
+    
+    comm_stats.add_message("mal_preprocess", mal_check_size);
 }
 
 fn main() {
-    let num_runs = 100;
+    // Parse command-line arguments
+    let args: Vec<String> = std::env::args().collect();
+    
+    let num_runs = if args.len() > 3 {
+        args[3].parse().unwrap_or(5)
+    } else {
+        5
+    };
+    
+    let num_clients = if args.len() > 1 {
+        args[1].parse().unwrap_or(100)
+    } else {
+        100
+    };
+    
+    let domain_size = if args.len() > 2 {
+        args[2].parse().unwrap_or(16384)
+    } else {
+        16384
+    };
+    
+    println!("========================================");
+    println!("Obsidian Microbenchmark Configuration");
+    println!("========================================");
+    println!("Number of bidders: {}", num_clients);
+    println!("Domain size: {}", domain_size);
+    println!("Number of runs: {}", num_runs);
+    println!("========================================\n");
+    println!("Variables being changed per run:");
+    println!("  - num_clients (bidders): {}", num_clients);
+    println!("  - domain_size: {}", domain_size);
+    println!("  - Each run uses different random inputs\n");
+    
     let mut preprocess_times = Vec::new();
     let mut online_times = Vec::new();
+    let mut preprocess_comm = Vec::new();
+    let mut online_comm = Vec::new();
     
     for run in 0..num_runs {
+        if run > 0 {
+            // Sleep 0.5 seconds between runs
+            std::thread::sleep(std::time::Duration::from_millis(500));
+        }
+        
         println!("=== Run {} ===", run + 1);
         
-        let num_clients = 100;
-        let domain_size = 16384;
+        // Initialize communication tracking for this run
+        let mut comm_stats = CommunicationStats::default();
 
         let overall_start = Instant::now();
 
@@ -184,8 +312,7 @@ fn main() {
                 let values2_0 = eval_all(&key2_0, domain_size);
                 let values2_1 = eval_all(&key2_1, domain_size);
 
-                mal_preprocess_check(&values1_0, &values1_1, &values2_0, &values2_1, 
-                                   domain_size, &r, &alpha_val, &r_0, &r_1, &alpha_val_0, &alpha_val_1);
+                // Note: mal_preprocess_check will be called later with comm_stats
                 
                 (
                     ((key1_0, key1_1), (key2_0, key2_1)),
@@ -221,8 +348,7 @@ fn main() {
                 let col_sum_values2_0 = eval_all(&col_key2_0, updated_domain);
                 let col_sum_values2_1 = eval_all(&col_key2_1, updated_domain);
 
-                mal_preprocess_check(&col_sum_values1_0, &col_sum_values1_1, &col_sum_values2_0, &col_sum_values2_1, 
-                    updated_domain, &r2, &alpha_val, &r2_0, &r2_1, &alpha_val2_0, &alpha_val2_1);
+                // Note: mal_preprocess_check will be called later with comm_stats
                 
                 (
                     ((col_key1_0, col_key1_1), (col_key2_0, col_key2_1)),
@@ -259,8 +385,7 @@ fn main() {
                 let tie_values2_0 = eval_all(&tie_key2_0, max_possible_sum);
                 let tie_values2_1 = eval_all(&tie_key2_1, max_possible_sum);
                 
-                mal_preprocess_check(&tie_values1_0, &tie_values1_1, &tie_values2_0, &tie_values2_1, 
-                    max_possible_sum, &r3, &alpha_val, &r3_0, &r3_1, &alpha_val3_0, &alpha_val3_1);
+                // Note: mal_preprocess_check will be called later with comm_stats
             
                 (
                     ((tie_key1_0, tie_key1_1), (tie_key2_0, tie_key2_1)),
@@ -286,11 +411,52 @@ fn main() {
         let alpha_r3 = alpha_val.clone() * r3.clone();
         let (alpha_r3_0, alpha_r3_1) = generate_alpha_shares(&alpha_r3);
     
+        // COMMUNICATION: Calculate preprocessing FSS shares (only Party 1's shares sent)
+        // Copied exactly from dpf_run_comm.rs
+        let mut preprocessing_size = 0;
+        preprocessing_size += fss_key_size(&client_keys[0].0.0);           // values1_shares
+        preprocessing_size += fss_key_size(&client_keys[0].1.0);           // values2_shares
+        preprocessing_size += fss_key_size(&col_keys[0].0.0);
+        preprocessing_size += fss_key_size(&col_keys[0].1.0);
+        preprocessing_size += fss_key_size(&tie_keys[0].0.0);
+        preprocessing_size += fss_key_size(&tie_keys[0].1.0);
+        preprocessing_size += share_size(&alpha_val_1); 
+        preprocessing_size += share_size(&r_1);                // r_share
+        preprocessing_size += share_size(&r2_1);               // r2_share  
+        preprocessing_size += share_size(&r3_1);               // r3_share
+        preprocessing_size += num_clients * 8;                      // x_values (u64 each)
+        comm_stats.add_message("preprocessing", preprocessing_size);
+        
+        // COMMUNICATION: Malicious security preprocessing checks
+        // Call mal_preprocess_check for all clients, domain_size elements, and max_possible_sum elements
+        for i in 0..num_clients {
+            let ((values1_0, values1_1), (values2_0, values2_1)) = &client_values[i];
+            let (r, (r_0, r_1)) = &client_rs[i];
+            let (alpha_val_0, alpha_val_1) = &client_alpha_shares[i];
+            mal_preprocess_check(values1_0, values1_1, values2_0, values2_1, 
+                               domain_size, r, &alpha_val, r_0, r_1, alpha_val_0, alpha_val_1, &mut comm_stats);
+        }
+        
+        for i in 0..domain_size {
+            let ((col_sum_values1_0, col_sum_values1_1), (col_sum_values2_0, col_sum_values2_1)) = &col_sum_values[i];
+            let (r2, (r2_0, r2_1)) = &col_rs[i];
+            let (alpha_val2_0, alpha_val2_1) = &col_alpha_shares[i];
+            mal_preprocess_check(col_sum_values1_0, col_sum_values1_1, col_sum_values2_0, col_sum_values2_1, 
+                               updated_domain, r2, &alpha_val, r2_0, r2_1, alpha_val2_0, alpha_val2_1, &mut comm_stats);
+        }
+        
+        for i in 0..max_possible_sum {
+            let ((tie_values1_0, tie_values1_1), (tie_values2_0, tie_values2_1)) = &tie_values[i];
+            let (r3, (r3_0, r3_1)) = &tie_rs[i];
+            let (alpha_val3_0, alpha_val3_1) = &tie_alpha_shares[i];
+            mal_preprocess_check(tie_values1_0, tie_values1_1, tie_values2_0, tie_values2_1, 
+                               max_possible_sum, r3, &alpha_val, r3_0, r3_1, alpha_val3_0, alpha_val3_1, &mut comm_stats);
+        }
 
         let mut x_val = vec![0; num_clients];
 
         for client in 0..num_clients {
-            println!("\nClient {}:", client);
+            // Removed empty "Client {}:" print - no useful output here
             let (one_hot, lsb_hot_index) = generate_one_hot_conventional(domain_size);
             let a_index = domain_size - 1 - lsb_hot_index;
             let a_val = FE::from(a_index as u32);
@@ -355,8 +521,10 @@ fn main() {
         while current_threshold > 0 && !second_highest_found {
             // println!("Checking for threshold: {} bidders", current_threshold);
             
+            // === ROUND 1: x2 Opening Communication ===
             // Step 1: Use SECOND FSS to get shifted column values for ALL bid levels
             let mut all_col_shifted_values = Vec::with_capacity(domain_size);
+            let mut z2_values = Vec::new();  // Track z2 MAC values for communication
             
             for idx in 0..domain_size {
                 // Open x2 = r2 - col_sum to get shift amount for SECOND FSS
@@ -394,6 +562,9 @@ fn main() {
                 z2_1.mul(&alpha_val_1);
                 z2_1.sub(&alpha_x2_1);
                 
+                // CORRECTED: These z2 values are what get communicated as MAC shares
+                z2_values.push(z2_0.clone());
+                
                 let z2_opened = z2_0 + z2_1;
                 if z2_opened.value() != 0 {
                     panic!("MAC failure on r2-col_sum opening for idx {}", idx);
@@ -417,6 +588,17 @@ fn main() {
                 all_col_shifted_values.push((col_sum_shifted_val_1_0, col_sum_shifted_val_1_1, 
                                             col_sum_shifted_val_2_0, col_sum_shifted_val_2_1));
             }
+            
+            // COMMUNICATION: x2 shares (only one party's shares)
+            let round1_opening_size = domain_size * share_size(&FE::zero());
+            comm_stats.add_message("round1_x2_opening", round1_opening_size);
+            
+            // COMMUNICATION: z2 MAC shares (only one party's z2 shares)
+            let round1_mac_size = domain_size * share_size(&z2_values[0]);
+            comm_stats.add_message("round1_x2_macs", round1_mac_size);
+
+            // === ROUND 2: r3 Shift Communication ===
+            
 
             // Step 2: Sum up from current_threshold to n-1 locally at each party
             let mut threshold_sum_0 = FE::zero();
@@ -439,6 +621,11 @@ fn main() {
             let r3_shift_0 = r3_0.clone() - threshold_sum_0.clone();
             let r3_shift_1 = r3_1.clone() - threshold_sum_1.clone();
             let r3_opened = r3_shift_0 + r3_shift_1;
+            
+            // COMMUNICATION: r3 shift shares (only one party's share)
+            let round2_opening_size = share_size(&r3_shift_0);
+            comm_stats.add_message("round2_r3_opening", round2_opening_size);
+            
             
             // Domain conversion for third FSS
             let p_minus1 = (FE::zero() - FE::one()).value();
@@ -466,6 +653,10 @@ fn main() {
             z3_1.mul(&alpha_val_1);
             z3_1.sub(&alpha_r3_threshold_1);
             
+            // COMMUNICATION: z3 MAC shares (only one party's z3 share)
+            let round2_mac_size = share_size(&z3_0);
+            comm_stats.add_message("round2_r3_macs", round2_mac_size);
+            
             let z3_total = z3_0 + z3_1;
             if z3_total.value() != 0 {
                 // panic!("MAC failure on r3-threshold_sum opening");
@@ -485,29 +676,42 @@ fn main() {
                 tie_shifted_val_2_1[i] = tie_values2_1[shift_idx].clone();
             }
 
-            // Step 4: Check if position 1 in the one-hot is set (exactly one bid level has >= current_threshold)
+            // === ROUND 3: Tie Detection Communication ===
+            // Step 4: Check if position 0 in the one-hot is set (exactly one bid level has >= current_threshold)
             let mut exact_one_check = FE::zero();
             exact_one_check.add(&tie_shifted_val_1_0[0]);
             exact_one_check.add(&tie_shifted_val_1_1[0]);
+            
+            // COMMUNICATION: tie detection result shares (only one party's share)
+            let round3_opening_size = share_size(&exact_one_check);
+            comm_stats.add_message("round3_tie_opening", round3_opening_size);
 
             if exact_one_check.value() == 0 {
                 second_highest_found = true;
                 
-                // MAC check for the one-hot position
+                // CORRECTED: MAC check produces z_0 and z_1 values  
                 let mut z_0 = exact_one_check.clone();
                 z_0.mul(&alpha_val_0);
-                z_0.sub(&tie_shifted_val_2_0[1]);
+                z_0.sub(&tie_shifted_val_2_0[0]);
 
                 let mut z_1 = exact_one_check.clone();
                 z_1.mul(&alpha_val_1);
-                z_1.sub(&tie_shifted_val_2_1[1]);
+                z_1.sub(&tie_shifted_val_2_1[0]);
+                
+                // COMMUNICATION: z MAC shares (only one party's z share)
+                let round3_mac_size = share_size(&z_0);
+                comm_stats.add_message("round3_tie_macs", round3_mac_size);
 
                 let z_total = z_0 + z_1;
                 if z_total.value() != 0 {
                     // panic!("MAC failure on one-hot position check!");
                 }
 
+                // === ROUND 4: Second Highest Finding Communication ===
                 // CORRECTED: Find the minimum index where col_sum >= current_threshold
+                let mut col_ge_threshold_count = 0;
+                let mut col_ge_threshold_z_values = Vec::new();
+                
                 for idx in 0..domain_size {
                     let (ref col_1_0, ref col_1_1, ref col_2_0, ref col_2_1) = &all_col_shifted_values[idx];
                     
@@ -522,10 +726,12 @@ fn main() {
                         col_ge_threshold_mac.add(&col_2_1[j]);
                     }
                     
+                    col_ge_threshold_count += 1;
+                    
                     if col_ge_threshold.value() >= 1 {
                         second_highest_bid = idx;
                         
-                        // MAC check for this specific bid level
+                        // CORRECTED: MAC check produces z values for col_ge_threshold
                         let mut mac_accum_0 = FE::zero();
                         let mut mac_accum_1 = FE::zero();
                         
@@ -534,29 +740,47 @@ fn main() {
                             mac_accum_1.add(&col_2_1[j]);
                         }
 
-                        let mut z_0 = col_ge_threshold.clone();
-                        z_0.mul(&alpha_val_0);
-                        z_0.sub(&mac_accum_0);
+                        let mut z_col_0 = col_ge_threshold.clone();
+                        z_col_0.mul(&alpha_val_0);
+                        z_col_0.sub(&mac_accum_0);
 
-                        let mut z_1 = col_ge_threshold.clone();
-                        z_1.mul(&alpha_val_1);
-                        z_1.sub(&mac_accum_1);
+                        let mut z_col_1 = col_ge_threshold.clone();
+                        z_col_1.mul(&alpha_val_1);
+                        z_col_1.sub(&mac_accum_1);
+                        
+                        col_ge_threshold_z_values.push(z_col_0.clone());
 
-                        let z_total = z_0 + z_1;
+                        let z_total = z_col_0 + z_col_1;
                         if z_total.value() != 0 {
                             panic!("MAC failure on second-highest reveal!");
                         }
 
                         if current_threshold < num_clients - 1 {
-                            // println!("TIE DETECTED: {} bidders tied for highest bid", num_clients - current_threshold);
+                            println!("TIE DETECTED: {} bidders tied for highest bid", num_clients - current_threshold);
                         }
                         println!("The value of second highest bid is: {}", second_highest_bid);
+                        
+                        break;
+                    }
+                }
+                
+                // COMMUNICATION: col_ge_threshold shares (only one party's shares for checked indices)
+                let round4_opening_size = col_ge_threshold_count * share_size(&FE::zero());
+                comm_stats.add_message("round4_second_opening", round4_opening_size);
+                
+                // COMMUNICATION: col_ge_threshold z MAC shares (only one party's z shares)
+                let round4_mac_size = col_ge_threshold_z_values.len() * share_size(&col_ge_threshold_z_values[0]);
+                comm_stats.add_message("round4_second_macs", round4_mac_size);
+
+                        // === ROUND 5: Winner Finding Communication ===
+                        
+                        let mut temp_sum_z_values = Vec::new();
 
                         // Find highest bidder
                         for bidder in 0..num_clients {
                             let mut temp_sum = FE::zero();
                             let mut temp_sum_mac = FE::zero();
-                            for index in 0..=idx {
+                            for index in 0..=second_highest_bid {
                                 let sh_index = (index + x_val[bidder] as usize) % domain_size;
                                 temp_sum.add(&values1_0[sh_index].clone());
                                 temp_sum.add(&values1_1[sh_index].clone());
@@ -564,8 +788,16 @@ fn main() {
                                 temp_sum_mac.add(&values2_1[sh_index].clone());
                             }
 
+                            // CORRECTED: MAC check produces z values for temp_sum
                             let mut expected_mac = temp_sum.clone();
                             expected_mac.mul(&alpha_val);
+                            
+                            let mut z_temp_0 = temp_sum.clone();
+                            z_temp_0.mul(&alpha_val_0);
+                            z_temp_0.sub(&temp_sum_mac);
+                            
+                            temp_sum_z_values.push(z_temp_0.clone());
+                            
                             if temp_sum_mac.value() != expected_mac.value() {
                                 panic!("MAC failure on highest-bidder reveal for bidder {}", bidder);
                             }
@@ -574,9 +806,15 @@ fn main() {
                                 println!("The index of highest bidder is: {}", bidder);
                             }
                         }
-                        break;
-                    }
-                }
+                        
+                        // COMMUNICATION: temp_sum shares (only one party's shares for all clients)
+                        let round5_opening_size = num_clients * share_size(&FE::zero());
+                        comm_stats.add_message("round5_winner_opening", round5_opening_size);
+                        
+                        // COMMUNICATION: temp_sum z MAC shares (only one party's z shares)
+                        let round5_mac_size = temp_sum_z_values.len() * share_size(&temp_sum_z_values[0]);
+                        comm_stats.add_message("round5_winner_macs", round5_mac_size);
+                        
                 break;
             }
             
@@ -596,10 +834,15 @@ fn main() {
         let client_duration = client_start.elapsed();
         println!("Pre-processing took: {:?}", preprocess_time);
         println!("Online time: {:?}", client_duration);
+        println!("Preprocessing communication: {} bytes", comm_stats.get_preprocessing_total());
+        println!("Online communication: {} bytes", comm_stats.get_online_total());
+        println!("Total communication: {} bytes", comm_stats.total_size);
         
-        // Store the times for averaging
+        // Store the times and communication for averaging
         preprocess_times.push(preprocess_time);
         online_times.push(client_duration);
+        preprocess_comm.push(comm_stats.get_preprocessing_total());
+        online_comm.push(comm_stats.get_online_total());
         
         println!("=== End of Run {} ===\n", run + 1);
     }
@@ -607,11 +850,16 @@ fn main() {
     // Calculate and display averages
     let avg_preprocess = preprocess_times.iter().sum::<Duration>() / num_runs as u32;
     let avg_online = online_times.iter().sum::<Duration>() / num_runs as u32;
+    let avg_preprocess_comm = preprocess_comm.iter().sum::<usize>() / num_runs;
+    let avg_online_comm = online_comm.iter().sum::<usize>() / num_runs;
     
     println!("========================================");
     println!("SUMMARY AFTER {} RUNS:", num_runs);
     println!("========================================");
     println!("Average preprocessing time: {:?}", avg_preprocess);
     println!("Average online time: {:?}", avg_online);
+    println!("Average preprocessing communication: {} bytes", avg_preprocess_comm);
+    println!("Average online communication: {} bytes", avg_online_comm);
+    println!("Average total communication: {} bytes", avg_preprocess_comm + avg_online_comm);
     println!("========================================");
 }

@@ -79,9 +79,108 @@ To clear secret share files between runs:
 ### Scripts
 - `clear_persist.sh` - Script to clear secret share files between runs
 
+## Network Benchmarking with RTT Emulation
+
+This section describes how to run MP-SPDZ Vickrey auction benchmarks with network RTT emulation using `netem`.
+
+### Prerequisites
+
+1. **Install and build MP-SPDZ:**
+   ```bash
+   cd rel_work/
+   git clone https://github.com/data61/MP-SPDZ.git mp-spdz-0.3.9
+   cd mp-spdz-0.3.9
+   git checkout v0.3.9
+   make -j8 tldr
+   ```
+
+2. **Copy artifacts:**
+   ```bash
+   cd ../mpspdz-artifacts/
+   ./setup_mpspdz.sh
+   ```
+
+3. **Compile the Vickrey program:**
+   ```bash
+   cd ../mp-spdz-0.3.9/
+   ./compile.py vickrey
+   ```
+
+### Running Network Benchmarks
+
+1. **Copy the benchmark scripts:**
+   ```bash
+   cp ../mpspdz-artifacts/run_network_benchmark.sh .
+   cp ../mpspdz-artifacts/run_all_benchmarks.sh .
+   chmod +x run_network_benchmark.sh run_all_benchmarks.sh
+   ```
+
+2. **Run a single configuration:**
+   ```bash
+   sudo ./run_network_benchmark.sh <num_bidders> <rtt_ms> <num_runs>
+   ```
+   
+   Example:
+   ```bash
+   sudo ./run_network_benchmark.sh 100 20 3
+   ```
+   
+   This runs 3 iterations with:
+   - 100 bidders
+   - 20ms RTT (10ms one-way delay via netem)
+
+3. **Run all configurations:**
+   ```bash
+   sudo ./run_all_benchmarks.sh [num_runs]
+   ```
+   
+   This runs all configurations from the paper with different RTT values.
+
+### Output
+
+Results are saved in CSV format in `results/`:
+- Filename: `mpspdz_network_<bidders>_<rtt>ms.csv`
+- Columns: `run,online_time_s,comm_bytes_mb,comm_bytes_kb`
+
+### How It Works
+
+1. **Netem Setup:** Uses `tc qdisc` to add network delay to loopback interface
+   - RTT is split into one-way delay: `delay = RTT / 2`
+   - Example: 20ms RTT → 10ms delay
+
+2. **Process Execution:**
+   - Runs MP-SPDZ with MASCOT protocol
+   - Two parties communicate over TCP with emulated RTT
+   - Logs are saved to `logs/` directory
+
+3. **Result Parsing:**
+   - Extracts timing from log files
+   - Extracts communication statistics
+   - Converts to MB and KB for convenience
+
+### Troubleshooting
+
+- **Permission denied:** Make sure script is executable:
+  ```bash
+  chmod +x run_network_benchmark.sh
+  ```
+
+- **Program not compiled:** Compile the Vickrey program:
+  ```bash
+  ./compile.py vickrey
+  ```
+
+- **Netem cleanup:** If interrupted, manually clean up:
+  ```bash
+  sudo tc qdisc del dev lo root
+  ```
+
+- **Parsing errors:** Check log files in `logs/` directory for actual output format
+
 ## Notes
 
 - The persistence files are optional and only needed for certain protocols
 - Evaluators should install MP-SPDZ themselves to ensure a clean environment
 - All source files in this directory are the custom artifacts for the evaluation
+- The benchmark script should be copied to the MP-SPDZ installation directory before running
 

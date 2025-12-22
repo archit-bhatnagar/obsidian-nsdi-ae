@@ -1,102 +1,57 @@
-# README
+# Obsidian: Private Vickrey Auctions
 
-TO RUN
+Implementation of Obsidian, a system for private Vickrey auctions using secure multi-party computation.
+
+**WARNING: This is research prototype code, not production-ready.**
+
+## Building
+
+```bash
 export RUSTFLAGS+="-C target-cpu=native"
-cargo run --release --bin dpf_run
-## WARNING: This is not production-ready code.
-
-
-For noting down communication costs need to run dpf_run_comm,
-For general benchmarking run dpf_benchmark
-This is software for a research prototype. Please
-do *NOT* use this code in production.
-
-## Background
-
-This is the source code that accompanies the paper
->  "Lightweight Techniques for Private Heavy Hitters".  
-> by Dan Boneh, Elette Boyle, Henry Corrigan-Gibbs, Niv Gilboa, and Yuval Ishai.  
-> _IEEE Symposium on Security and Privacy 2021_
-
-The commit used in the paper is [ddcdc2a736160bfd](https://github.com/henrycg/heavyhitters/commit/ddcdc2a736160bfdfb55003ad8059124b13ee73d). Since then, since some of the dependencies changed, I stripped out the TLS encryption between the parties so that the code still compiles. (If anyone is interested in working TLS back in here, please open a pull request!)
-
-For questions about the code, please contact Henry at:  henrycg {at} csail {dot} mit {dot} edu.
-
-We have tested this code with:
->  rustc 1.44.1 (c7087fe00 2020-06-17)  
->  rustc 1.50.0-nightly (11c94a197 2020-12-21)
-
-## Getting started
-
-First, make sure that you have a working Rust installation:
-
-```
-$ rustc --version   
-rustc 1.47.0
-$ cargo --version
-cargo 1.46.0
+cargo build --release
 ```
 
-Now run the following steps to build and test the source:
+## Running Microbenchmarks
 
-```
-## Set the RUSTFLAGS environment variable to build
-## with AES-NI and vector instructions where available.
-## Make sure to build with the --release flag, otherwise
-## the performance will be terrible. If you are using a
-## non-bash shell, then you will have to modify the following
-## command.
-$ export RUSTFLAGS+="-C target-cpu=native" 
-$ cargo build --release
+To replicate the microbenchmark results from the paper:
 
-## Run tets.
-$ cargo test
-... lots of output ...
+1. **Run benchmarks:**
+   ```bash
+   ./run_microbenchmarks.sh
+   ```
+   This runs benchmarks across different configurations and saves results to `results/microbenchmark_results.csv`.
 
-```
+2. **Generate plots:**
+   ```bash
+   python3 plot_microbenchmarks.py
+   ```
+   Requires matplotlib: `python3 -m pip install --user matplotlib`
 
-You should now be set to run the code. In one shell, run the following command:
+   Generates:
+   - `scale_domain.pdf` - Timing vs domain (100 bidders)
+   - `scale_bidders.pdf` - Timing vs bidders (1024 domain)
+   - `communication_domain.pdf` - Communication vs domain (100 bidders)
+   - `communication_bidders.pdf` - Communication vs bidders (1024 domain)
 
-```
-$ cargo run --release --bin server -- --config src/bin/config.json --server_id 0
-```
+## Other Binaries
 
-This starts one server process with ID `0` using the config file located at `src/bin/config.json`. In a second shell, you can start the second server process:
+- `dpf_benchmark` - Microbenchmark with timing and communication tracking
+- `dpf_run` - Basic auction protocol execution
+- `dpf_run_comm` - Execution with detailed communication analysis
 
-```
-$ cargo run --release --bin server -- --config src/bin/config.json --server_id 1
-```
+## Network Benchmarks
 
-Now, the servers should be ready to process client requests. In a third shell, run the following command to send `1000` client requests to the servers (this will take some time):
+To run network benchmarks with RTT emulation:
 
-```
-$ cargo run --release --bin leader -- --config src/bin/config.json -n 1000
-```
-
-You should see lots of output...
-
-## The config file
-
-The client and servers use a common configuration file, which contains the parameters for the system. An example of one such file is in `src/bin/config.json`. The contents of that file are here:
-
-```
-{
-  "data_len": 512,
-  "threshold": 0.001,
-  "server0": "0.0.0.0:8000",
-  "server1": "0.0.0.0:8001",
-  "addkey_batch_size": 100,
-  "sketch_batch_size": 100000,
-  "sketch_batch_size_last": 25000,
-  "num_sites": 10000,
-  "zipf_exponent": 1.03
-}
+```bash
+sudo ./run_network_benchmark.sh <num_bidders> <domain_size> <rtt_ms> [num_runs]
 ```
 
-The parameters are:
+Results are saved to `results/network_benchmark_<bidders>_<domain>_<rtt>ms.csv`.
 
-* `data_len`: The bitlength of each client's private string.
-* `threshold`: The servers will output the collection of strings that more than a `threshold` of clients hold.
-* `server0` and `server1`: The `IP:port` of tuple for the two servers. The servers can run on different IP addresses, but these IPs must be publicly addressable.
-* `*_batch_size`: The number of each type of RPC request to bundle together. The underlying RPC library has an annoying limit on the size of each RPC request, so you cannot set these values too large.
-* `num_sites` and `zipf_exponent`: Each simulated client samples its private string from a Zipf distribution over strings with parameter `zipf_exponent` and support `num_sites`.
+## Results
+
+All benchmark results are saved in `results/`:
+- `microbenchmark_results.csv` - Detailed per-run data (timing + communication)
+- `microbenchmark_raw.txt` - Raw benchmark output
+- `network_benchmark_*.csv` - Network benchmark results with RTT emulation

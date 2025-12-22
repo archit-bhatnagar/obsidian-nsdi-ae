@@ -229,7 +229,35 @@ void benchmark_maxid_auction(int num_bidders, int bit_width) {
     }
 }
 
-int main() {
+int main(int argc, char* argv[]) {
+    // If arguments provided, run single benchmark
+    if (argc >= 3) {
+        int num_bidders = atoi(argv[1]);
+        int domain_size = atoi(argv[2]);
+        
+        // Convert domain size to bit width
+        // domain_size = 2^bit_width, so bit_width = log2(domain_size)
+        int bit_width = 0;
+        int temp = domain_size;
+        while (temp > 1) {
+            bit_width++;
+            temp >>= 1;
+        }
+        // Add 1 to ensure we can represent all values up to domain_size
+        if ((1ULL << bit_width) < domain_size) {
+            bit_width++;
+        }
+        
+        // Print CSV header
+        cout << "Bidders,BitWidth,MaxValue,ComputedMax,ActualMax,Status,ErrorPct,"
+             << "EncryptTime(ms),ComputeTime(ms),TotalTime(ms),"
+             << "CommSize(MB),AvgBidSize(KB),NoiseBudget" << endl;
+        
+        benchmark_maxid_auction(num_bidders, bit_width);
+        return 0;
+    }
+    
+    // Otherwise, run all test configurations
     // Print CSV header
     cout << "Bidders,BitWidth,MaxValue,ComputedMax,ActualMax,Status,ErrorPct,"
          << "EncryptTime(ms),ComputeTime(ms),TotalTime(ms),"
