@@ -47,8 +47,9 @@ SYSTEMS = {
     },
     'MP-SPDZ': {
         'dir': os.path.join(SCRIPT_DIR, 'mp-spdz-0.3.9', 'results'),
-        'pattern': 'mpspdz_network_{bidders}_{rtt}ms.csv',
+        'pattern': 'mpspdz_network_{bidders}_{domain}_{rtt}ms.csv',
         'time_col': 'online_time_s',
+        'preproc_col': 'preprocessing_time_s',
         'comm_col': 'comm_bytes_kb',
         'color': '#ff7f0e',  # Orange
     },
@@ -65,11 +66,7 @@ FIXED_BIDDERS_FOR_DOMAIN = 100   # Bidders fixed at 100 for varying domain plots
 
 def load_results(system_name, system_info, num_bidders, domain_size, rtt_ms):
     """Load and average results for a specific configuration"""
-    if system_name == 'MP-SPDZ':
-        # MP-SPDZ doesn't use domain_size in filename
-        pattern = system_info['pattern'].format(bidders=num_bidders, rtt=rtt_ms)
-    else:
-        pattern = system_info['pattern'].format(bidders=num_bidders, domain=domain_size, rtt=rtt_ms)
+    pattern = system_info['pattern'].format(bidders=num_bidders, domain=domain_size, rtt=rtt_ms)
     
     filepath = os.path.join(system_info['dir'], pattern)
     
@@ -91,6 +88,15 @@ def load_results(system_name, system_info, num_bidders, domain_size, rtt_ms):
         
         times = [float(row[time_col]) for row in rows if time_col in row and row[time_col]]
         comms = [float(row[comm_col]) for row in rows if comm_col in row and row[comm_col]]
+        
+        # For MP-SPDZ, add preprocessing time to online time
+        if system_name == 'MP-SPDZ' and 'preproc_col' in system_info:
+            preproc_col = system_info['preproc_col']
+            preproc_times = [float(row[preproc_col]) for row in rows if preproc_col in row and row[preproc_col]]
+            if len(preproc_times) > 0 and len(times) > 0:
+                # Add preprocessing time (only counted once) to online time
+                avg_preproc = sum(preproc_times) / len(preproc_times)
+                times = [t + avg_preproc for t in times]
         
         if len(times) == 0 or len(comms) == 0:
             return None, None

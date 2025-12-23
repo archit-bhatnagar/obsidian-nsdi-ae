@@ -6,12 +6,12 @@ This directory contains scripts to run network benchmarks across multiple system
 
 ## Running Benchmarks
 
-### Run All Benchmarks
+### Run Network Benchmarks
 
-To run all benchmarks for all systems:
+To run the network benchmarks needed for the plots:
 
 ```bash
-sudo ./run_all_benchmarks.sh [num_runs]
+sudo ./run_network_benchmarks.sh [num_runs]
 ```
 
 This will:
@@ -20,29 +20,11 @@ This will:
 3. Run MP-SPDZ benchmarks for all configurations
 4. Save results to CSV files in each system's results directory
 
-### Run Only Missing Benchmarks
-
-To run only configurations that don't have results yet:
-
-```bash
-sudo ./run_missing_benchmarks.sh [num_runs]
-```
-
-This checks existing CSV files and only runs missing configurations, which is faster if you've already run some benchmarks.
-
 **Configurations for plots:**
 - **Varying bidders plots**: Domain fixed at 1000, bidders: 25, 50, 100, RTT: 20ms, 40ms
 - **Varying domain plots**: Bidders fixed at 100, domains: 100, 1000, 10000, RTT: 20ms, 40ms
 
-### Run Only Required Benchmarks
-
-To run only the configurations needed for the plots (faster):
-
-```bash
-sudo ./run_required_benchmarks.sh [num_runs]
-```
-
-This runs only the 10 unique configurations needed for the 4 plots.
+This runs the 10 unique configurations needed for the 4 plots.
 
 ## Generating Plots
 
@@ -64,7 +46,7 @@ Each plot shows all 3 systems (Obsidian, Addax, MP-SPDZ). Time plots use solid b
 
 - **Obsidian**: `obsidian/results/network_benchmark_*.csv`
 - **Addax**: `addax/auction/auction-local-computation/results/addax_network_*.csv`
-- **MP-SPDZ**: `mp-spdz-0.3.9/results/mpspdz_network_*.csv`
+- **MP-SPDZ**: `mpspdz-artifacts/results/mpspdz_network_*.csv`
 
 ## Throughput Benchmarks
 
