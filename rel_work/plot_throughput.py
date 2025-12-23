@@ -172,12 +172,12 @@ def plot_latency_vs_throughput():
     addax_noninteractive_auctions, addax_noninteractive_p50, addax_noninteractive_p99 = load_addax_latency(addax_noninteractive_dir)
     addax_noninteractive_auctions_tput, addax_noninteractive_throughput = load_addax_throughput(addax_noninteractive_dir)
     
-    # Plot Obsidian
+    # Plot Obsidian (green, + markers)
     if obsidian_tput and obsidian_p50 and obsidian_p99:
-        ax.plot(obsidian_tput, obsidian_p50, 'g+-', label='Obsidian p50', linewidth=2, markersize=8)
-        ax.plot(obsidian_tput, obsidian_p99, 'g+--', label='Obsidian p99', linewidth=2, markersize=8)
+        ax.plot(obsidian_tput, obsidian_p50, 'g*-', label='Obsidian p50', linewidth=2, markersize=8)
+        ax.plot(obsidian_tput, obsidian_p99, 'g*--', label='Obsidian p99', linewidth=2, markersize=8)
     
-    # Plot Addax 2-round (use throughput from throughput files, latency from latency files)
+    # Plot Addax 2-round (orange, + markers) - use throughput from throughput files, latency from latency files
     # Match up by auction count
     if addax_2round_auctions and addax_2round_p50:
         # Create a mapping from auction count to throughput
@@ -196,10 +196,10 @@ def plot_latency_vs_throughput():
                 p99_for_plot.append(addax_2round_p99[i])
         
         if tput_for_latency:
-            ax.plot(tput_for_latency, p50_for_plot, 'o-', label='Addax(2-Round) p50', linewidth=2, markersize=8, color='#ff7f0e')
-            ax.plot(tput_for_latency, p99_for_plot, 'o--', label='Addax(2-Round) p99', linewidth=2, markersize=8, color='#ff7f0e')
+            ax.plot(tput_for_latency, p50_for_plot, 'o-', label='Addax (2-Round) p50', linewidth=2, markersize=8, color='#ff7f0e')
+            ax.plot(tput_for_latency, p99_for_plot, 'o--', label='Addax (2-Round) p99', linewidth=2, markersize=8, color='#ff7f0e')
     
-    # Plot Addax non-interactive
+    # Plot Addax non-interactive (blue, diamond markers)
     if addax_noninteractive_auctions and addax_noninteractive_p50:
         # Create a mapping from auction count to throughput
         tput_map = {}
@@ -217,15 +217,15 @@ def plot_latency_vs_throughput():
                 p99_for_plot.append(addax_noninteractive_p99[i])
         
         if tput_for_latency:
-            ax.plot(tput_for_latency, p50_for_plot, 'D-', label='Addax(Non-Interactive) p50', linewidth=2, markersize=8, color='#1f77b4')
-            ax.plot(tput_for_latency, p99_for_plot, 'D--', label='Addax(Non-Interactive) p99', linewidth=2, markersize=8, color='#1f77b4')
+            ax.plot(tput_for_latency, p50_for_plot, 'D-', label='Addax (Non-Interactive) p50', linewidth=2, markersize=8, color='#1f77b4')
+            ax.plot(tput_for_latency, p99_for_plot, 'D--', label='Addax (Non-Interactive) p99', linewidth=2, markersize=8, color='#1f77b4')
     
     ax.set_xlabel('Throughput (auctions/second)')
     ax.set_ylabel('Latency (ms)')
-    ax.set_title('Latency vs Throughput')
+    ax.set_title('Latency (ms) vs. Throughput (auctions/second)')
     ax.legend(loc='upper left', fontsize=12)
-    ax.grid(True, alpha=0.3)
-    ax.set_xlim(left=0)
+    ax.grid(True, alpha=0.3, linestyle='-', linewidth=0.5)
+    ax.set_xlim(left=0, right=500)
     ax.set_ylim(bottom=0, top=1000)
     
     plt.tight_layout()

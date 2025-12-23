@@ -153,7 +153,8 @@ cd "$SCRIPT_DIR/addax/auction/throughput/build"
 
 # For non-interactive, use non-interactive shares
 # Non-interactive uses 1000 buckets (for 1000 domain size)
-BIDDER_NUM_NONINTERACTIVE=100
+# NOTE: Using 96 bidders instead of 100 due to a bug with Addax on non-quadruple numbers and parsing
+BIDDER_NUM_NONINTERACTIVE=96
 BUCKET_NUM_NONINTERACTIVE=1000
 
 SHARES_DIR_NONINTERACTIVE="$SCRIPT_DIR/addax/auction/tools/build/shares_noninteractive"
@@ -168,19 +169,38 @@ mkdir -p "$SHARES_DIR_NONINTERACTIVE" "$COMMITS_DIR_NONINTERACTIVE"
 bash adv-gen-sc.sh $BIDDER_NUM_NONINTERACTIVE $BUCKET_NUM_NONINTERACTIVE "$SHARES_DIR_NONINTERACTIVE" "$COMMITS_DIR_NONINTERACTIVE"
 cd "$SCRIPT_DIR/addax/auction/throughput/build"
 
-# For non-interactive, the idx files are flat (96-1000-s1-idx, etc.) in the base directory
-# The server script expects a directory, so we point it to the base directory
-IDX_DIR_NONINTERACTIVE="$IDX_BASE"
+# The server expects shares in subdirectories 1/ and 2/ (even for non-interactive)
+# and idx files named 1-round-s1-idx, 1-round-s2-idx, 2-round-s1-idx, 2-round-s2-idx
+echo "  Setting up server-expected directory structure..."
+cd "$SCRIPT_DIR/addax/auction/tools/build"
+
+# Create subdirectories and copy shares
+sudo mkdir -p "$SHARES_DIR_NONINTERACTIVE/1" "$SHARES_DIR_NONINTERACTIVE/2"
+sudo cp "$SHARES_DIR_NONINTERACTIVE"/adv*-s*-bid-* "$SHARES_DIR_NONINTERACTIVE/1/" 2>/dev/null
+sudo cp "$SHARES_DIR_NONINTERACTIVE"/adv*-s*-bid-* "$SHARES_DIR_NONINTERACTIVE/2/" 2>/dev/null
+
+# Create symlinks for idx files (server expects round-based naming)
 IDX_S1="$IDX_BASE/${BIDDER_NUM_NONINTERACTIVE}-${BUCKET_NUM_NONINTERACTIVE}-s1-idx"
 IDX_S2="$IDX_BASE/${BIDDER_NUM_NONINTERACTIVE}-${BUCKET_NUM_NONINTERACTIVE}-s2-idx"
 IDX_COMMIT="$IDX_BASE/${BIDDER_NUM_NONINTERACTIVE}-${BUCKET_NUM_NONINTERACTIVE}-commit-idx"
 
 if [ ! -f "$IDX_S1" ] || [ ! -f "$IDX_S2" ] || [ ! -f "$IDX_COMMIT" ]; then
-    echo "  Warning: Non-interactive idx files not found. Expected:"
+    echo "  Error: Non-interactive idx files not found. Expected:"
     echo "    $IDX_S1"
     echo "    $IDX_S2"
     echo "    $IDX_COMMIT"
+    exit 1
 fi
+
+# Create symlinks for round-based idx files
+sudo ln -sf "${BIDDER_NUM_NONINTERACTIVE}-${BUCKET_NUM_NONINTERACTIVE}-s1-idx" "$IDX_BASE/1-round-s1-idx"
+sudo ln -sf "${BIDDER_NUM_NONINTERACTIVE}-${BUCKET_NUM_NONINTERACTIVE}-s2-idx" "$IDX_BASE/1-round-s2-idx"
+sudo ln -sf "${BIDDER_NUM_NONINTERACTIVE}-${BUCKET_NUM_NONINTERACTIVE}-s1-idx" "$IDX_BASE/2-round-s1-idx"
+sudo ln -sf "${BIDDER_NUM_NONINTERACTIVE}-${BUCKET_NUM_NONINTERACTIVE}-s2-idx" "$IDX_BASE/2-round-s2-idx"
+
+# For non-interactive, the idx files are in the base directory
+IDX_DIR_NONINTERACTIVE="$IDX_BASE"
+cd "$SCRIPT_DIR/addax/auction/throughput/build"
 
 RESULTS_DIR_NONINTERACTIVE="$SCRIPT_DIR/addax/auction/throughput/results_noninteractive"
 mkdir -p "$RESULTS_DIR_NONINTERACTIVE"

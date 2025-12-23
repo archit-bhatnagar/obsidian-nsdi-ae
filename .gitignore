@@ -15,3 +15,5 @@ obsidian/target/CACHEDIR.TAG
 obsidian/results/*.csv
 obsidian/results/*.txt
 obsidian/results/*.png
+*.pdf
+ARTIFACT_DESCRIPTION.md
