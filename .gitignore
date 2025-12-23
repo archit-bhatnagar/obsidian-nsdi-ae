@@ -1,6 +1,5 @@
 # Ignore third-party frameworks and dependencies
 rel_work/zkp_framework/
-rel_work/addax/
 
 # Ignore MP-SPDZ installation (evaluators should install it themselves)
 rel_work/mp-spdz-0.3.9/
