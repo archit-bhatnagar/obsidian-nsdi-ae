@@ -16,3 +16,14 @@ obsidian/results/*.txt
 obsidian/results/*.png
 *.pdf
 ARTIFACT_DESCRIPTION.md
+
+# macOS files
+.DS_Store
+**/.DS_Store
+
+# Addax build artifacts
+rel_work/addax/**/build/
+rel_work/addax/**/*.o
+rel_work/addax/**/*.a
+rel_work/addax/**/CMakeCache.txt
+rel_work/addax/**/CMakeFiles/

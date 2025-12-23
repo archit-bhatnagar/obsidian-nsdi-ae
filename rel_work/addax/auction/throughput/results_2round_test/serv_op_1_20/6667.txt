@@ -1,0 +1,447 @@
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/2-interactive-idx/1-round-s1-idx /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/2-interactive-idx/1-round-s2-idx
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv0-s1-bid-72 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv0-s2-bid-72
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv10-s1-bid-63 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv10-s2-bid-63
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv11-s1-bid-51 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv11-s2-bid-51
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv12-s1-bid-77 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv12-s2-bid-77
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv13-s1-bid-79 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv13-s2-bid-79
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv14-s1-bid-34 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv14-s2-bid-34
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv15-s1-bid-40 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv15-s2-bid-40
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv16-s1-bid-29 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv16-s2-bid-29
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv17-s1-bid-19 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv17-s2-bid-19
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv18-s1-bid-19 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv18-s2-bid-19
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv19-s1-bid-2 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv19-s2-bid-2
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv1-s1-bid-35 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv1-s2-bid-35
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv20-s1-bid-26 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv20-s2-bid-26
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv21-s1-bid-23 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv21-s2-bid-23
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv22-s1-bid-87 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv22-s2-bid-87
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv23-s1-bid-10 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv23-s2-bid-10
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv24-s1-bid-61 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv24-s2-bid-61
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv25-s1-bid-48 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv25-s2-bid-48
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv26-s1-bid-70 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv26-s2-bid-70
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv27-s1-bid-60 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv27-s2-bid-60
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv28-s1-bid-90 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv28-s2-bid-90
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv29-s1-bid-35 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv29-s2-bid-35
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv2-s1-bid-70 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv2-s2-bid-70
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv30-s1-bid-40 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv30-s2-bid-40
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv31-s1-bid-65 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv31-s2-bid-65
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv32-s1-bid-40 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv32-s2-bid-40
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv33-s1-bid-99 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv33-s2-bid-99
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv34-s1-bid-13 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv34-s2-bid-13
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv35-s1-bid-74 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv35-s2-bid-74
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv36-s1-bid-86 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv36-s2-bid-86
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv37-s1-bid-93 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv37-s2-bid-93
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv38-s1-bid-38 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv38-s2-bid-38
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv39-s1-bid-98 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv39-s2-bid-98
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv3-s1-bid-93 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv3-s2-bid-93
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv40-s1-bid-63 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv40-s2-bid-63
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv41-s1-bid-22 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv41-s2-bid-22
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv42-s1-bid-39 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv42-s2-bid-39
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv43-s1-bid-11 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv43-s2-bid-11
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv44-s1-bid-73 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv44-s2-bid-73
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv45-s1-bid-14 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv45-s2-bid-14
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv46-s1-bid-90 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv46-s2-bid-90
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv47-s1-bid-85 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv47-s2-bid-85
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv48-s1-bid-80 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv48-s2-bid-80
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv49-s1-bid-80 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv49-s2-bid-80
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv4-s1-bid-38 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv4-s2-bid-38
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv50-s1-bid-8 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv50-s2-bid-8
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv51-s1-bid-12 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv51-s2-bid-12
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv52-s1-bid-54 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv52-s2-bid-54
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv53-s1-bid-85 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv53-s2-bid-85
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv54-s1-bid-14 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv54-s2-bid-14
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv55-s1-bid-47 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv55-s2-bid-47
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv56-s1-bid-9 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv56-s2-bid-9
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv57-s1-bid-43 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv57-s2-bid-43
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv58-s1-bid-57 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv58-s2-bid-57
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv59-s1-bid-57 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv59-s2-bid-57
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv5-s1-bid-56 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv5-s2-bid-56
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv60-s1-bid-13 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv60-s2-bid-13
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv61-s1-bid-85 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv61-s2-bid-85
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv62-s1-bid-18 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv62-s2-bid-18
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv63-s1-bid-48 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv63-s2-bid-48
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv64-s1-bid-34 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv64-s2-bid-34
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv65-s1-bid-84 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv65-s2-bid-84
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv66-s1-bid-87 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv66-s2-bid-87
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv67-s1-bid-79 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv67-s2-bid-79
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv68-s1-bid-43 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv68-s2-bid-43
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv69-s1-bid-18 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv69-s2-bid-18
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv6-s1-bid-43 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv6-s2-bid-43
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv70-s1-bid-83 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv70-s2-bid-83
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv71-s1-bid-7 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv71-s2-bid-7
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv72-s1-bid-30 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv72-s2-bid-30
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv73-s1-bid-46 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv73-s2-bid-46
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv74-s1-bid-93 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv74-s2-bid-93
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv75-s1-bid-41 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv75-s2-bid-41
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv76-s1-bid-20 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv76-s2-bid-20
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv77-s1-bid-22 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv77-s2-bid-22
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv78-s1-bid-28 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv78-s2-bid-28
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv79-s1-bid-49 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv79-s2-bid-49
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv7-s1-bid-2 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv7-s2-bid-2
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv80-s1-bid-19 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv80-s2-bid-19
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv81-s1-bid-56 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv81-s2-bid-56
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv82-s1-bid-41 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv82-s2-bid-41
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv83-s1-bid-91 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv83-s2-bid-91
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv84-s1-bid-81 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv84-s2-bid-81
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv85-s1-bid-4 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv85-s2-bid-4
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv86-s1-bid-12 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv86-s2-bid-12
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv87-s1-bid-20 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv87-s2-bid-20
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv88-s1-bid-51 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv88-s2-bid-51
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv89-s1-bid-45 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv89-s2-bid-45
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv8-s1-bid-38 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv8-s2-bid-38
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv90-s1-bid-51 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv90-s2-bid-51
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv91-s1-bid-74 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv91-s2-bid-74
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv92-s1-bid-97 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv92-s2-bid-97
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv93-s1-bid-38 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv93-s2-bid-38
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv94-s1-bid-38 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv94-s2-bid-38
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv95-s1-bid-14 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv95-s2-bid-14
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv9-s1-bid-85 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/1/adv9-s2-bid-85
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/2-interactive-idx/2-round-s1-idx /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/2-interactive-idx/2-round-s2-idx
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv0-s1-bid-48 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv0-s2-bid-48
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv10-s1-bid-28 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv10-s2-bid-28
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv11-s1-bid-16 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv11-s2-bid-16
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv12-s1-bid-21 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv12-s2-bid-21
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv13-s1-bid-49 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv13-s2-bid-49
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv14-s1-bid-54 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv14-s2-bid-54
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv15-s1-bid-80 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv15-s2-bid-80
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv16-s1-bid-45 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv16-s2-bid-45
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv17-s1-bid-90 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv17-s2-bid-90
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv18-s1-bid-23 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv18-s2-bid-23
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv19-s1-bid-11 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv19-s2-bid-11
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv1-s1-bid-45 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv1-s2-bid-45
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv20-s1-bid-78 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv20-s2-bid-78
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv21-s1-bid-92 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv21-s2-bid-92
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv22-s1-bid-95 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv22-s2-bid-95
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv23-s1-bid-8 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv23-s2-bid-8
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv24-s1-bid-89 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv24-s2-bid-89
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv25-s1-bid-36 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv25-s2-bid-36
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv26-s1-bid-14 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv26-s2-bid-14
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv27-s1-bid-96 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv27-s2-bid-96
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv28-s1-bid-27 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv28-s2-bid-27
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv29-s1-bid-40 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv29-s2-bid-40
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv2-s1-bid-38 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv2-s2-bid-38
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv30-s1-bid-30 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv30-s2-bid-30
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv31-s1-bid-75 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv31-s2-bid-75
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv32-s1-bid-74 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv32-s2-bid-74
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv33-s1-bid-75 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv33-s2-bid-75
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv34-s1-bid-77 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv34-s2-bid-77
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv35-s1-bid-45 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv35-s2-bid-45
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv36-s1-bid-73 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv36-s2-bid-73
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv37-s1-bid-29 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv37-s2-bid-29
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv38-s1-bid-38 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv38-s2-bid-38
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv39-s1-bid-85 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv39-s2-bid-85
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv3-s1-bid-13 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv3-s2-bid-13
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv40-s1-bid-72 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv40-s2-bid-72
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv41-s1-bid-20 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv41-s2-bid-20
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv42-s1-bid-35 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv42-s2-bid-35
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv43-s1-bid-63 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv43-s2-bid-63
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv44-s1-bid-67 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv44-s2-bid-67
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv45-s1-bid-50 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv45-s2-bid-50
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv46-s1-bid-27 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv46-s2-bid-27
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv47-s1-bid-64 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv47-s2-bid-64
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv48-s1-bid-30 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv48-s2-bid-30
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv49-s1-bid-9 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv49-s2-bid-9
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv4-s1-bid-9 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv4-s2-bid-9
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv50-s1-bid-76 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv50-s2-bid-76
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv51-s1-bid-66 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv51-s2-bid-66
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv52-s1-bid-29 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv52-s2-bid-29
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv53-s1-bid-77 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv53-s2-bid-77
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv54-s1-bid-57 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv54-s2-bid-57
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv55-s1-bid-75 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv55-s2-bid-75
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv56-s1-bid-59 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv56-s2-bid-59
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv57-s1-bid-64 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv57-s2-bid-64
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv58-s1-bid-9 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv58-s2-bid-9
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv59-s1-bid-41 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv59-s2-bid-41
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv5-s1-bid-32 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv5-s2-bid-32
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv60-s1-bid-11 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv60-s2-bid-11
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv61-s1-bid-11 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv61-s2-bid-11
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv62-s1-bid-48 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv62-s2-bid-48
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv63-s1-bid-86 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv63-s2-bid-86
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv64-s1-bid-61 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv64-s2-bid-61
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv65-s1-bid-27 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv65-s2-bid-27
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv66-s1-bid-55 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv66-s2-bid-55
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv67-s1-bid-79 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv67-s2-bid-79
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv68-s1-bid-99 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv68-s2-bid-99
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv69-s1-bid-45 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv69-s2-bid-45
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv6-s1-bid-16 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv6-s2-bid-16
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv70-s1-bid-40 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv70-s2-bid-40
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv71-s1-bid-21 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv71-s2-bid-21
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv72-s1-bid-75 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv72-s2-bid-75
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv73-s1-bid-42 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv73-s2-bid-42
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv74-s1-bid-76 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv74-s2-bid-76
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv75-s1-bid-14 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv75-s2-bid-14
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv76-s1-bid-95 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv76-s2-bid-95
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv77-s1-bid-29 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv77-s2-bid-29
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv78-s1-bid-94 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv78-s2-bid-94
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv79-s1-bid-20 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv79-s2-bid-20
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv7-s1-bid-11 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv7-s2-bid-11
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv80-s1-bid-96 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv80-s2-bid-96
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv81-s1-bid-32 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv81-s2-bid-32
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv82-s1-bid-4 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv82-s2-bid-4
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv83-s1-bid-35 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv83-s2-bid-35
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv84-s1-bid-43 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv84-s2-bid-43
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv85-s1-bid-17 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv85-s2-bid-17
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv86-s1-bid-81 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv86-s2-bid-81
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv87-s1-bid-7 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv87-s2-bid-7
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv88-s1-bid-26 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv88-s2-bid-26
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv89-s1-bid-77 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv89-s2-bid-77
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv8-s1-bid-73 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv8-s2-bid-73
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv90-s1-bid-39 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv90-s2-bid-39
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv91-s1-bid-20 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv91-s2-bid-20
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv92-s1-bid-72 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv92-s2-bid-72
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv93-s1-bid-44 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv93-s2-bid-44
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv94-s1-bid-38 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv94-s2-bid-38
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv95-s1-bid-34 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv95-s2-bid-34
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv9-s1-bid-90 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/2/adv9-s2-bid-90
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/2-interactive-idx/3-round-s1-idx /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/2-interactive-idx/3-round-s2-idx
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv0-s1-bid-31 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv0-s2-bid-31
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv10-s1-bid-35 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv10-s2-bid-35
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv11-s1-bid-8 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv11-s2-bid-8
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv12-s1-bid-32 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv12-s2-bid-32
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv13-s1-bid-9 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv13-s2-bid-9
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv14-s1-bid-32 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv14-s2-bid-32
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv15-s1-bid-85 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv15-s2-bid-85
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv16-s1-bid-83 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv16-s2-bid-83
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv17-s1-bid-83 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv17-s2-bid-83
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv18-s1-bid-53 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv18-s2-bid-53
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv19-s1-bid-64 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv19-s2-bid-64
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv1-s1-bid-94 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv1-s2-bid-94
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv20-s1-bid-87 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv20-s2-bid-87
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv21-s1-bid-13 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv21-s2-bid-13
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv22-s1-bid-36 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv22-s2-bid-36
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv23-s1-bid-57 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv23-s2-bid-57
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv24-s1-bid-26 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv24-s2-bid-26
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv25-s1-bid-41 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv25-s2-bid-41
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv26-s1-bid-63 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv26-s2-bid-63
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv27-s1-bid-26 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv27-s2-bid-26
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv28-s1-bid-70 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv28-s2-bid-70
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv29-s1-bid-16 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv29-s2-bid-16
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv2-s1-bid-44 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv2-s2-bid-44
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv30-s1-bid-36 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv30-s2-bid-36
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv31-s1-bid-64 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv31-s2-bid-64
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv32-s1-bid-48 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv32-s2-bid-48
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv33-s1-bid-29 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv33-s2-bid-29
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv34-s1-bid-77 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv34-s2-bid-77
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv35-s1-bid-43 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv35-s2-bid-43
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv36-s1-bid-98 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv36-s2-bid-98
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv37-s1-bid-58 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv37-s2-bid-58
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv38-s1-bid-17 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv38-s2-bid-17
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv39-s1-bid-2 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv39-s2-bid-2
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv3-s1-bid-62 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv3-s2-bid-62
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv40-s1-bid-10 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv40-s2-bid-10
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv41-s1-bid-50 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv41-s2-bid-50
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv42-s1-bid-92 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv42-s2-bid-92
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv43-s1-bid-8 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv43-s2-bid-8
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv44-s1-bid-18 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv44-s2-bid-18
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv45-s1-bid-80 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv45-s2-bid-80
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv46-s1-bid-36 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv46-s2-bid-36
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv47-s1-bid-51 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv47-s2-bid-51
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv48-s1-bid-9 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv48-s2-bid-9
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv49-s1-bid-36 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv49-s2-bid-36
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv4-s1-bid-91 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv4-s2-bid-91
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv50-s1-bid-63 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv50-s2-bid-63
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv51-s1-bid-37 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv51-s2-bid-37
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv52-s1-bid-70 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv52-s2-bid-70
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv53-s1-bid-42 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv53-s2-bid-42
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv54-s1-bid-46 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv54-s2-bid-46
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv55-s1-bid-29 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv55-s2-bid-29
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv56-s1-bid-44 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv56-s2-bid-44
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv57-s1-bid-51 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv57-s2-bid-51
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv58-s1-bid-11 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv58-s2-bid-11
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv59-s1-bid-24 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv59-s2-bid-24
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv5-s1-bid-71 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv5-s2-bid-71
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv60-s1-bid-64 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv60-s2-bid-64
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv61-s1-bid-27 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv61-s2-bid-27
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv62-s1-bid-8 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv62-s2-bid-8
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv63-s1-bid-29 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv63-s2-bid-29
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv64-s1-bid-50 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv64-s2-bid-50
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv65-s1-bid-81 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv65-s2-bid-81
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv66-s1-bid-4 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv66-s2-bid-4
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv67-s1-bid-17 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv67-s2-bid-17
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv68-s1-bid-90 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv68-s2-bid-90
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv69-s1-bid-9 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv69-s2-bid-9
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv6-s1-bid-95 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv6-s2-bid-95
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv70-s1-bid-7 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv70-s2-bid-7
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv71-s1-bid-80 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv71-s2-bid-80
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv72-s1-bid-60 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv72-s2-bid-60
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv73-s1-bid-68 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv73-s2-bid-68
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv74-s1-bid-31 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv74-s2-bid-31
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv75-s1-bid-84 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv75-s2-bid-84
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv76-s1-bid-24 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv76-s2-bid-24
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv77-s1-bid-60 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv77-s2-bid-60
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv78-s1-bid-59 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv78-s2-bid-59
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv79-s1-bid-40 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv79-s2-bid-40
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv7-s1-bid-92 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv7-s2-bid-92
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv80-s1-bid-80 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv80-s2-bid-80
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv81-s1-bid-33 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv81-s2-bid-33
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv82-s1-bid-90 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv82-s2-bid-90
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv83-s1-bid-49 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv83-s2-bid-49
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv84-s1-bid-48 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv84-s2-bid-48
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv85-s1-bid-77 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv85-s2-bid-77
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv86-s1-bid-16 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv86-s2-bid-16
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv87-s1-bid-96 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv87-s2-bid-96
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv88-s1-bid-49 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv88-s2-bid-49
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv89-s1-bid-37 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv89-s2-bid-37
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv8-s1-bid-69 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv8-s2-bid-69
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv90-s1-bid-52 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv90-s2-bid-52
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv91-s1-bid-6 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv91-s2-bid-6
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv92-s1-bid-20 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv92-s2-bid-20
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv93-s1-bid-9 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv93-s2-bid-9
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv94-s1-bid-59 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv94-s2-bid-59
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv95-s1-bid-16 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/3/adv95-s2-bid-16
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/2-interactive-idx/4-round-s1-idx /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/2-interactive-idx/4-round-s2-idx
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv0-s1-bid-9 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv0-s2-bid-9
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv10-s1-bid-10 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv10-s2-bid-10
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv11-s1-bid-12 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv11-s2-bid-12
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv12-s1-bid-40 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv12-s2-bid-40
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv13-s1-bid-50 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv13-s2-bid-50
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv14-s1-bid-85 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv14-s2-bid-85
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv15-s1-bid-40 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv15-s2-bid-40
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv16-s1-bid-88 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv16-s2-bid-88
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv17-s1-bid-9 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv17-s2-bid-9
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv18-s1-bid-68 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv18-s2-bid-68
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv19-s1-bid-14 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv19-s2-bid-14
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv1-s1-bid-30 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv1-s2-bid-30
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv20-s1-bid-85 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv20-s2-bid-85
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv21-s1-bid-5 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv21-s2-bid-5
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv22-s1-bid-36 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv22-s2-bid-36
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv23-s1-bid-24 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv23-s2-bid-24
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv24-s1-bid-27 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv24-s2-bid-27
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv25-s1-bid-35 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv25-s2-bid-35
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv26-s1-bid-83 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv26-s2-bid-83
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv27-s1-bid-42 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv27-s2-bid-42
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv28-s1-bid-32 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv28-s2-bid-32
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv29-s1-bid-21 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv29-s2-bid-21
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv2-s1-bid-24 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv2-s2-bid-24
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv30-s1-bid-95 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv30-s2-bid-95
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv31-s1-bid-8 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv31-s2-bid-8
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv32-s1-bid-11 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv32-s2-bid-11
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv33-s1-bid-3 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv33-s2-bid-3
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv34-s1-bid-90 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv34-s2-bid-90
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv35-s1-bid-89 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv35-s2-bid-89
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv36-s1-bid-19 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv36-s2-bid-19
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv37-s1-bid-50 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv37-s2-bid-50
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv38-s1-bid-8 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv38-s2-bid-8
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv39-s1-bid-32 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv39-s2-bid-32
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv3-s1-bid-93 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv3-s2-bid-93
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv40-s1-bid-64 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv40-s2-bid-64
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv41-s1-bid-60 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv41-s2-bid-60
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv42-s1-bid-65 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv42-s2-bid-65
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv43-s1-bid-4 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv43-s2-bid-4
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv44-s1-bid-58 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv44-s2-bid-58
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv45-s1-bid-63 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv45-s2-bid-63
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv46-s1-bid-83 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv46-s2-bid-83
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv47-s1-bid-16 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv47-s2-bid-16
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv48-s1-bid-28 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv48-s2-bid-28
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv49-s1-bid-89 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv49-s2-bid-89
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv4-s1-bid-77 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv4-s2-bid-77
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv50-s1-bid-11 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv50-s2-bid-11
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv51-s1-bid-27 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv51-s2-bid-27
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv52-s1-bid-15 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv52-s2-bid-15
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv53-s1-bid-42 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv53-s2-bid-42
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv54-s1-bid-15 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv54-s2-bid-15
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv55-s1-bid-61 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv55-s2-bid-61
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv56-s1-bid-71 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv56-s2-bid-71
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv57-s1-bid-32 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv57-s2-bid-32
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv58-s1-bid-2 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv58-s2-bid-2
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv59-s1-bid-99 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv59-s2-bid-99
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv5-s1-bid-53 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv5-s2-bid-53
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv60-s1-bid-73 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv60-s2-bid-73
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv61-s1-bid-6 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv61-s2-bid-6
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv62-s1-bid-14 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv62-s2-bid-14
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv63-s1-bid-96 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv63-s2-bid-96
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv64-s1-bid-6 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv64-s2-bid-6
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv65-s1-bid-41 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv65-s2-bid-41
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv66-s1-bid-5 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv66-s2-bid-5
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv67-s1-bid-79 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv67-s2-bid-79
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv68-s1-bid-50 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv68-s2-bid-50
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv69-s1-bid-55 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv69-s2-bid-55
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv6-s1-bid-43 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv6-s2-bid-43
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv70-s1-bid-22 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv70-s2-bid-22
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv71-s1-bid-100 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv71-s2-bid-100
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv72-s1-bid-51 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv72-s2-bid-51
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv73-s1-bid-29 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv73-s2-bid-29
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv74-s1-bid-77 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv74-s2-bid-77
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv75-s1-bid-29 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv75-s2-bid-29
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv76-s1-bid-27 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv76-s2-bid-27
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv77-s1-bid-99 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv77-s2-bid-99
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv78-s1-bid-44 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv78-s2-bid-44
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv79-s1-bid-84 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv79-s2-bid-84
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv7-s1-bid-58 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv7-s2-bid-58
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv80-s1-bid-42 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv80-s2-bid-42
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv81-s1-bid-64 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv81-s2-bid-64
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv82-s1-bid-97 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv82-s2-bid-97
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv83-s1-bid-13 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv83-s2-bid-13
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv84-s1-bid-84 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv84-s2-bid-84
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv85-s1-bid-37 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv85-s2-bid-37
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv86-s1-bid-68 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv86-s2-bid-68
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv87-s1-bid-91 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv87-s2-bid-91
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv88-s1-bid-86 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv88-s2-bid-86
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv89-s1-bid-3 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv89-s2-bid-3
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv8-s1-bid-2 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv8-s2-bid-2
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv90-s1-bid-5 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv90-s2-bid-5
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv91-s1-bid-69 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv91-s2-bid-69
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv92-s1-bid-17 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv92-s2-bid-17
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv93-s1-bid-58 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv93-s2-bid-58
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv94-s1-bid-43 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv94-s2-bid-43
+/home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv95-s1-bid-59 /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares/4/adv95-s2-bid-59
+finish load
+loop to handle: 2
+server handle time: 0.0289429
+elapsed time: 0.0290101, handled task: 1
+loop to handle: 2
+server handle time: 0.027865
+elapsed time: 0.0686407, handled task: 2
+loop to handle: 2
+server handle time: 0.0249746
+elapsed time: 0.114626, handled task: 3
+loop to handle: 2
+server handle time: 0.0267139
+elapsed time: 0.167047, handled task: 4
+loop to handle: 2
+server handle time: 0.0270794
+elapsed time: 0.217774, handled task: 5
+loop to handle: 2
+server handle time: 0.0272155
+elapsed time: 0.268514, handled task: 6
+loop to handle: 2
+server handle time: 0.0265539
+elapsed time: 0.318244, handled task: 7
+loop to handle: 2
+server handle time: 0.0255207
+elapsed time: 0.367071, handled task: 8
+loop to handle: 2
+server handle time: 0.0233318
+elapsed time: 0.414847, handled task: 9
+loop to handle: 2
+server handle time: 0.023466
+elapsed time: 0.46548, handled task: 10
+loop to handle: 2
+server handle time: 0.0232414
+elapsed time: 0.515565, handled task: 11
+loop to handle: 2
+server handle time: 0.0241882
+elapsed time: 0.566221, handled task: 12
+loop to handle: 2
+server handle time: 0.0249374
+elapsed time: 0.617441, handled task: 13
+loop to handle: 2
+server handle time: 0.0243017
+elapsed time: 0.666973, handled task: 14
+loop to handle: 2
+server handle time: 0.0251969
+elapsed time: 0.718544, handled task: 15
+loop to handle: 2
+server handle time: 0.0242275
+elapsed time: 0.767487, handled task: 16
+loop to handle: 2
+server handle time: 0.0269691
+elapsed time: 0.821014, handled task: 17
+loop to handle: 2
+server handle time: 0.0234879
+elapsed time: 0.86734, handled task: 18
+loop to handle: 2
+server handle time: 0.0265044
+elapsed time: 0.921127, handled task: 19
+loop to handle: 2
+server handle time: 0.0253603
+elapsed time: 0.969895, handled task: 20

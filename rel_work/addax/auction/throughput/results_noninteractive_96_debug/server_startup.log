@@ -1,0 +1,3 @@
+mkdir: cannot create directory ‘/home/architb/obsidian-nsdi/rel_work/addax/auction/throughput/results_noninteractive_96_debug/serv_op_1_5’: File exists
+1
+./addax-server -t 1 -a 96 -s /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build -S /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build -d /home/architb/obsidian-nsdi/rel_work/addax/auction/tools/build/shares_noninteractive_96 -r 1 -i 0.0.0.0:6667 > /home/architb/obsidian-nsdi/rel_work/addax/auction/throughput/results_noninteractive_96_debug/serv_op_1_5/6667.txt &

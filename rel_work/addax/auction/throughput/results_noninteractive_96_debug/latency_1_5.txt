@@ -1,0 +1,2 @@
+median latency: 22.56
+99% latency: 24.13

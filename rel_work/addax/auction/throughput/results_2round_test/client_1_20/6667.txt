@@ -1,0 +1,25 @@
+sleep period: 50000
+0 handle time: 0.0456058
+1 handle time: 0.0349198
+2 handle time: 0.0305802
+3 handle time: 0.0326803
+4 handle time: 0.0332093
+5 handle time: 0.0337273
+6 handle time: 0.0331423
+7 handle time: 0.031699
+8 handle time: 0.0291631
+9 handle time: 0.0295531
+10 handle time: 0.0293558
+11 handle time: 0.0297804
+12 handle time: 0.0306998
+13 handle time: 0.0299238
+14 handle time: 0.0312721
+15 handle time: 0.02993
+16 handle time: 0.0331227
+17 handle time: 0.0291403
+18 handle time: 0.0326135
+19 handle time: 0.0311614
+total time spent: 1.00594
+50 percent, id: 10, handle_time: 0.0312721
+99 percent, id: 18, handle_time: 0.0349198
+avg handle time: 0.032064

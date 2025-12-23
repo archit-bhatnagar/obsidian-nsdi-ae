@@ -1,0 +1,3 @@
+/home/architb/obsidian-nsdi/rel_work/addax/auction/throughput/results_noninteractive_100/serv_op_1_18/6667.txt
+not saturated, use  18
+total throughput:  18
