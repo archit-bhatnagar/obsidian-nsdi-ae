@@ -6,8 +6,7 @@ use counttree::fastfield::FE;
 use counttree::sketch::*;
 use rand::Rng;
 use counttree::prg::FromRng;
-mod common;
-use common::{Message, send_message, receive_message, fe_to_bytes, bytes_to_fe, generate_alpha_shares, bulk_fe_to_bytes, bulk_bytes_to_fe};
+use counttree::common::{Message, send_message, receive_message, fe_to_bytes, bytes_to_fe, generate_alpha_shares, bulk_fe_to_bytes, bulk_bytes_to_fe};
 use chrono::Local;
 
 

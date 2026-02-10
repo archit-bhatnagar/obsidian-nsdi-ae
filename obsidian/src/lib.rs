@@ -9,6 +9,7 @@ pub mod mpc;
 pub mod prg;
 pub mod rpc;
 pub mod sketch;
+pub mod common; // Added common module
 
 #[macro_use]
 extern crate lazy_static;

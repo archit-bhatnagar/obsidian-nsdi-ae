@@ -1,0 +1,2 @@
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/home/architb/obsidian-nsdi/obsidian/target/release/build/typenum-d964e8a8e2629972/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=/home/architb/obsidian-nsdi/obsidian/target/release/build/typenum-d964e8a8e2629972/out/op.rs

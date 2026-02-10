@@ -4,8 +4,7 @@ use std::time::Duration;
 use counttree::*;
 use counttree::fastfield::FE;
 use counttree::sketch::*;
-mod common;
-use common::{Message, send_message, receive_message, fe_to_bytes, bytes_to_fe, bulk_fe_to_bytes, bulk_bytes_to_fe};
+use counttree::common::{Message, send_message, receive_message, fe_to_bytes, bytes_to_fe, bulk_fe_to_bytes, bulk_bytes_to_fe};
 use chrono::Local;
 
 

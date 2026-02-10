@@ -21,6 +21,9 @@ ARTIFACT_DESCRIPTION.md
 .DS_Store
 **/.DS_Store
 
+# Obsidian direct release
+# obsidian/target/release
+
 # Addax build artifacts
 rel_work/addax/**/build/
 rel_work/addax/**/*.o

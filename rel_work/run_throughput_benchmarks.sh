@@ -22,7 +22,7 @@ cd "$SCRIPT_DIR/../obsidian"
 # Build if needed
 if [ ! -f "./target/release/dpf_tput" ]; then
     echo "  Building dpf_tput..."
-    export RUSTFLAGS+="-C target-cpu=native"
+    export RUSTFLAGS="${RUSTFLAGS:-} -C target-cpu=native"
     cargo build --release --bin dpf_tput 2>&1 || {
         echo "  Warning: Obsidian build failed. Skipping Obsidian benchmarks."
         echo "  (You can run Obsidian benchmarks separately later)"
@@ -31,7 +31,7 @@ if [ ! -f "./target/release/dpf_tput" ]; then
 fi
 
 if [ -f "./target/release/dpf_tput" ]; then
-    export RUSTFLAGS+="-C target-cpu=native"
+    export RUSTFLAGS="${RUSTFLAGS:-} -C target-cpu=native"
     # Run Obsidian throughput benchmark
     echo "  Running Obsidian throughput test..."
     bash ./bench_tput.sh
@@ -75,7 +75,7 @@ echo "    Bidders: $BIDDER_NUM, Buckets: $BUCKET_NUM_2ROUND, Rounds: $ROUNDS_2RO
 cd "$SCRIPT_DIR/addax/auction/tools/build"
 # Always regenerate to ensure clean state
 sudo rm -rf "$SHARES_DIR_INTERACTIVE" "$COMMITS_DIR_INTERACTIVE" "$IDX_DIR_INTERACTIVE" 2>/dev/null
-sudo bash adv-gen-sc-interactive.sh $BIDDER_NUM $BUCKET_NUM_2ROUND "$SHARES_DIR_INTERACTIVE" "$COMMITS_DIR_INTERACTIVE" $ROUNDS_2ROUND
+sudo bash ../adv-gen-sc-interactive.sh $BIDDER_NUM $BUCKET_NUM_2ROUND "$SHARES_DIR_INTERACTIVE" "$COMMITS_DIR_INTERACTIVE" $ROUNDS_2ROUND
 echo "    Created directory: ${ROUNDS_2ROUND}-interactive-idx with 3*${ROUNDS_2ROUND} files"
 cd "$SCRIPT_DIR/addax/auction/throughput/build"
 
@@ -105,13 +105,13 @@ for load in "${LOAD_VALUES_2ROUND[@]}"; do
     
     # Start server (1 server, using interactive shares and ${ROUNDS_2ROUND}-interactive-idx, ${ROUNDS_2ROUND} rounds)
     echo "    Starting server..."
-    bash "$SCRIPT_DIR/addax/auction/throughput/build/run-addax-server.sh" 1 "$SERVER_DIR" "$SHARES_DIR_INTERACTIVE" "$IDX_DIR_INTERACTIVE" $ROUNDS_2ROUND &
+    bash "$SCRIPT_DIR/addax/auction/throughput/run-addax-server.sh" 1 "$SERVER_DIR" "$SHARES_DIR_INTERACTIVE" "$IDX_DIR_INTERACTIVE" $ROUNDS_2ROUND &
     SERVER_PID=$!
     sleep 2
     
     # Start client (1 client, load auctions, ${ROUNDS_2ROUND} rounds)
     echo "    Starting client with load $load..."
-    bash "$SCRIPT_DIR/addax/auction/throughput/build/run-addax-client.sh" 1 $load "$CLIENT_DIR" $ROUNDS_2ROUND
+    bash "$SCRIPT_DIR/addax/auction/throughput/run-addax-client.sh" 1 $load "$CLIENT_DIR" $ROUNDS_2ROUND
     
     # Wait for completion (longer for higher loads)
     if [ $load -le 20 ]; then
@@ -166,7 +166,7 @@ cd "$SCRIPT_DIR/addax/auction/tools/build"
 # Always regenerate to ensure clean state
 sudo rm -rf "$SHARES_DIR_NONINTERACTIVE" "$COMMITS_DIR_NONINTERACTIVE" 2>/dev/null
 mkdir -p "$SHARES_DIR_NONINTERACTIVE" "$COMMITS_DIR_NONINTERACTIVE"
-bash adv-gen-sc.sh $BIDDER_NUM_NONINTERACTIVE $BUCKET_NUM_NONINTERACTIVE "$SHARES_DIR_NONINTERACTIVE" "$COMMITS_DIR_NONINTERACTIVE"
+bash ../adv-gen-sc.sh $BIDDER_NUM_NONINTERACTIVE $BUCKET_NUM_NONINTERACTIVE "$SHARES_DIR_NONINTERACTIVE" "$COMMITS_DIR_NONINTERACTIVE"
 cd "$SCRIPT_DIR/addax/auction/throughput/build"
 
 # The server expects shares in subdirectories 1/ and 2/ (even for non-interactive)
@@ -222,13 +222,13 @@ for load in "${LOAD_VALUES_NONINTERACTIVE[@]}"; do
     
     # Start server (1 server, using non-interactive shares, base idx dir)
     echo "    Starting server..."
-    bash "$SCRIPT_DIR/addax/auction/throughput/build/run-addax-server.sh" 1 "$SERVER_DIR" "$SHARES_DIR_NONINTERACTIVE" "$IDX_DIR_NONINTERACTIVE" 1 &
+    bash "$SCRIPT_DIR/addax/auction/throughput/run-addax-server.sh" 1 "$SERVER_DIR" "$SHARES_DIR_NONINTERACTIVE" "$IDX_DIR_NONINTERACTIVE" 1 &
     SERVER_PID=$!
     sleep 2
     
     # Start client (1 client, load auctions)
     echo "    Starting client with load $load..."
-    bash "$SCRIPT_DIR/addax/auction/throughput/build/run-addax-client.sh" 1 $load "$CLIENT_DIR" 1
+    bash "$SCRIPT_DIR/addax/auction/throughput/run-addax-client.sh" 1 $load "$CLIENT_DIR" 1
     
     # Wait for client processes to finish (they run in background)
     # Calculate wait time based on load: roughly 1 second per auction + buffer

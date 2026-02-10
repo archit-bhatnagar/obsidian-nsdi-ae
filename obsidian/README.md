@@ -7,7 +7,7 @@ Implementation of Obsidian, a system for private Vickrey auctions using secure m
 ## Building
 
 ```bash
-export RUSTFLAGS+="-C target-cpu=native"
+export RUSTFLAGS="${RUSTFLAGS:-} -C target-cpu=native"
 cargo build --release
 ```
 

@@ -18,11 +18,11 @@ mkdir -p "$RESULTS_DIR"
 # Build if needed
 if [ ! -f "$BINARY" ]; then
     echo "Building dpf_benchmark..."
-    export RUSTFLAGS+="-C target-cpu=native"
+    export RUSTFLAGS="${RUSTFLAGS:-} -C target-cpu=native"
     cargo build --release --bin dpf_benchmark
 fi
 
-export RUSTFLAGS+="-C target-cpu=native"
+export RUSTFLAGS="${RUSTFLAGS:-} -C target-cpu=native"
 
 # Initialize CSV
 echo "num_bidders,domain_size,run,phase,time_ns,time_ms,time_us,comm_bytes" > "$RESULTS_FILE"

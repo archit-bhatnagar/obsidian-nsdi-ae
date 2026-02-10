@@ -1,0 +1,10 @@
+/home/architb/obsidian-nsdi/obsidian/target/release/deps/libtracing_opentelemetry-9025e644c697b0da.rmeta: /home/architb/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-opentelemetry-0.17.4/src/lib.rs /home/architb/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-opentelemetry-0.17.4/src/layer.rs /home/architb/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-opentelemetry-0.17.4/src/span_ext.rs /home/architb/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-opentelemetry-0.17.4/src/tracer.rs
+
+/home/architb/obsidian-nsdi/obsidian/target/release/deps/libtracing_opentelemetry-9025e644c697b0da.rlib: /home/architb/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-opentelemetry-0.17.4/src/lib.rs /home/architb/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-opentelemetry-0.17.4/src/layer.rs /home/architb/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-opentelemetry-0.17.4/src/span_ext.rs /home/architb/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-opentelemetry-0.17.4/src/tracer.rs
+
+/home/architb/obsidian-nsdi/obsidian/target/release/deps/tracing_opentelemetry-9025e644c697b0da.d: /home/architb/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-opentelemetry-0.17.4/src/lib.rs /home/architb/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-opentelemetry-0.17.4/src/layer.rs /home/architb/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-opentelemetry-0.17.4/src/span_ext.rs /home/architb/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-opentelemetry-0.17.4/src/tracer.rs
+
+/home/architb/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-opentelemetry-0.17.4/src/lib.rs:
+/home/architb/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-opentelemetry-0.17.4/src/layer.rs:
+/home/architb/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-opentelemetry-0.17.4/src/span_ext.rs:
+/home/architb/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tracing-opentelemetry-0.17.4/src/tracer.rs:
