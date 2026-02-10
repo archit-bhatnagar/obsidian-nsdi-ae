@@ -7,31 +7,34 @@ Each file contains 'domain_size' number of random bid values (0-100).
 import random
 import sys
 
-def generate_inputs(domain_size, output_dir="Player-Data"):
-    """Generate Input-P0-0 and Input-P1-0 files with domain_size bids each."""
+def generate_inputs(count, max_bid, output_dir="Player-Data"):
+    """Generate Input-P0-0 and Input-P1-0 files with 'count' bids each, range 0 to max_bid."""
     random.seed(42)  # Deterministic for reproducibility
     
     # Generate bids for party 0
     with open(f"{output_dir}/Input-P0-0", "w") as f:
-        for _ in range(domain_size):
-            bid = random.randint(0, 100)
+        for _ in range(count):
+            bid = random.randint(0, max_bid)
             f.write(f"{bid}\n")
     
     # Generate bids for party 1
     with open(f"{output_dir}/Input-P1-0", "w") as f:
-        for _ in range(domain_size):
-            bid = random.randint(0, 100)
+        for _ in range(count):
+            bid = random.randint(0, max_bid)
             f.write(f"{bid}\n")
     
-    print(f"Generated Input-P0-0 and Input-P1-0 with {domain_size} bids each")
+    print(f"Generated Input-P0-0 and Input-P1-0 with {count} bids each (max {max_bid})")
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: python3 generate_inputs.py <domain_size> [output_dir]")
+    if len(sys.argv) < 3:
+        print("Usage: python3 generate_inputs.py <count> <max_bid> [output_dir]")
         sys.exit(1)
     
-    domain_size = int(sys.argv[1])
-    output_dir = sys.argv[2] if len(sys.argv) > 2 else "Player-Data"
+    count = int(sys.argv[1])
+    max_bid = int(sys.argv[2])
+    output_dir = sys.argv[3] if len(sys.argv) > 3 else "Player-Data"
     
-    generate_inputs(domain_size, output_dir)
+    generate_inputs(count, max_bid, output_dir)
+
+
 

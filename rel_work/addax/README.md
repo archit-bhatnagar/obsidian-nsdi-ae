@@ -51,7 +51,7 @@ This section describes how to run Addax non-interactive auction benchmarks with 
    make -j
    
    # Copy generators.txt to build directory
-   cp ../files/generators.txt .
+   cp ../../files/generators.txt .
    
    # Copy generation scripts
    cp ../adv-gen-sc.sh .

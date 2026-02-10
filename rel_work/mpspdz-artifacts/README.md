@@ -120,22 +120,17 @@ This section describes how to run MP-SPDZ Vickrey auction benchmarks with networ
    sudo ./run_network_benchmark.sh <num_bidders> <rtt_ms> <num_runs>
    ```
    
-   Example:
+   Example :
    ```bash
-   sudo ./run_network_benchmark.sh 100 20 3
+   sudo ./run_network_benchmark.sh 100 100 20 1
    ```
    
    This runs 3 iterations with:
    - 100 bidders
+   - 100 bid domain
    - 20ms RTT (10ms one-way delay via netem)
 
-3. **Run all configurations:**
-   ```bash
-   sudo ./run_all_benchmarks.sh [num_runs]
-   ```
-   
-   This runs all configurations from the paper with different RTT values.
-
+(Note: The original vickrey optimization needs a number of inputs divisible bu num_threads so the script actually does the closest appproximation of num_bidders for that)
 ### Output
 
 Results are saved in CSV format in `results/`:
