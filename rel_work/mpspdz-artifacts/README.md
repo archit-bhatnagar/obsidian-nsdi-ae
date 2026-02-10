@@ -6,13 +6,12 @@ This directory contains the custom MPC programs and data files for evaluating th
 
 - `Programs/` - Custom MPC source files (`.mpc` programs)
 - `Player-Data/` - Input data files for the MPC programs
-- `Persistence/` - Pre-generated persistence files for certain protocols
 
 ## Setup Instructions
 
 ### 1. Install MP-SPDZ
 
-Clone and build MP-SPDZ version 0.3.9:
+**Option A - Clone from GitHub (recommended):**
 
 ```bash
 cd rel_work/
@@ -20,6 +19,16 @@ git clone https://github.com/data61/MP-SPDZ.git mp-spdz-0.3.9
 cd mp-spdz-0.3.9
 git checkout v0.3.9
 make -j8 tldr
+```
+
+**Option B - Download pre-packaged release (if GitHub build fails):**
+
+```bash
+cd rel_work/
+wget https://github.com/data61/MP-SPDZ/releases/download/v0.3.9/mp-spdz-0.3.9.tar.xz
+tar -xf mp-spdz-0.3.9.tar.xz
+cd mp-spdz-0.3.9
+Scripts/tldr.sh
 ```
 
 For detailed installation instructions, see the [MP-SPDZ documentation](https://github.com/data61/MP-SPDZ).
@@ -159,6 +168,16 @@ Results are saved in CSV format in `results/`:
   ```bash
   chmod +x run_network_benchmark.sh
   ```
+
+- **MP-SPDZ build fails (boost download errors):** If cloning from GitHub and running `make -j8 tldr` fails with boost-related errors, use the pre-packaged source release instead:
+  ```bash
+  cd rel_work/
+  wget https://github.com/data61/MP-SPDZ/releases/download/v0.3.9/mp-spdz-0.3.9.tar.xz
+  tar -xf mp-spdz-0.3.9.tar.xz
+  cd mp-spdz-0.3.9
+  Scripts/tldr.sh
+  ```
+  Then continue with step 2 (Copy Artifacts) above.
 
 - **Program not compiled:** Compile the Vickrey program:
   ```bash
